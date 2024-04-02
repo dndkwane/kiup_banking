@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/cp_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
+	<script type="text/javascript">
+		function fileAttach(obj) {
+			var $this = $(obj).closest('.file');
+			$this.find('[type=file]').trigger('click');
+			$this.find('[type=file]').not('.is-evented').on('change', function () {
+				var value = $(this).val();
+				$this.find('[type=text]').val(value);
+			}).addClass('is-evented');
+		}
+	</script>
+</head>
+
+<body>
+	<div id="g-wrapper">
+		<script>include.header()</script>
+		<div id="g-container">
+			<script>include.aside.init()</script>
+
+			<!-- Content -->
+			<article id="g-content">
+				<div class="g-content-header">
+					<h1 class="g-h1">Form Group</h1>
+					<p class="g-explain-h1">Library Elements</p>
+				</div>
+				<div class="g-content-body">
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Form Content</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">type-row</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<div class="form-area" style="max-width:720px; width:100%">
+											<div class="form type-row">
+												<div class="form-container">
+													<div class="form-title">
+														<label for="sText21" class="form-label">아이디</label>
+													</div>
+													<div class="form-content">
+														<div class="form-controls flexible">
+															<input type="text" name="sText21" id="sText21" class="form-input">
+														</div>
+													</div>
+												</div>
+												<div class="form-desc">
+													<p>Description Message</p>
+												</div>
+											</div>
+											<div class="form type-row">
+												<div class="form-container">
+													<div class="form-title">
+														<label for="sText11" class="form-label">아이디</label>
+													</div>
+													<div class="form-content">
+														<div class="form-controls flexible">
+															<input type="text" name="sText11" id="sText11" class="form-input">
+														</div>
+													</div>
+												</div>
+												<div class="form-alert is-errored is-visibled">
+													<p>Error Message</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h3 class="g-h3">type-col</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<div class="form-area" style="max-width:720px; width:100%;">
+											<div class="form type-col">
+												<div class="form-title"><label for="sText22" class="form-label">아이디</label></div>
+												<div class="form-content">
+													<div class="form-controls flexible">
+														<input type="text" name="sText22" id="sText22" class="form-input">
+													</div>
+													<div class="form-info">
+														<p>Information Message</p>
+													</div>
+												</div>
+											</div>
+											<div class="form type-col">
+												<div class="form-title"><label for="sText22" class="form-label">아이디</label></div>
+												<div class="form-content">
+													<div class="form-controls flexible">
+														<input type="text" name="sText22" id="sText22" class="form-input">
+													</div>
+													<div class="form-alert is-successed is-visibled">
+														<p>Success Message</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<h3 class="g-h3">flexible</h3>
+							<div class="g-example-wrap" style="max-width:720px; width:100%;">
+								<div class="g-example-body">
+									<div class="form type-col">
+										<div class="form-controls flexible">
+											<span class="form-text">아이디</span>
+											<input type="text" name="sText22" id="sText22" class="form-input">
+											<span class="form-split">원</span>
+											<div class="form-alert flex-right is-visibled">
+												<p>왼쪽정렬 메세지</p>
+											</div>
+										</div>
+									</div>
+									
+									<div class="form type-col">
+										<div class="form-controls flexible">
+											<span class="form-text">직장</span>
+											<input type="text" name="" id="" value="" placeholder="Prepend &amp; Append" class="form-input">
+											<!-- <button type="button" class="button form-button"><span>전송</span></button> -->
+											<div class="form-alert flex-right is-errored is-visibled">
+												<p>우측정렬 메세지</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+				</div>
+			</article>
+			<!-- //Content -->
+			<script>include.quick.init()</script>
+		</div>
+		<script>include.footer()</script>
+	</div>
+</body>
+
+</html>

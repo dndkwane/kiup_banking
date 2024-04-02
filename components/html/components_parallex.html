@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/cp_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
+	<style>
+		.parallex-area {
+			position: relative;
+			height: 400px;
+		}
+
+		.object-1 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			width: 100px;
+			background-color: #000;
+			color: #fff;
+		}
+	</style>
+	<script>
+		<!--
+			$(function(){
+				var scr_t = 0;
+				var max_t = 300;
+				var limit_t = 500;
+				var speed = max_t/limit_t;
+		
+				var parallex = function(){
+					var value = scr_t * speed;
+					console.log(scr_t < limit_t, scr_t, limit_t, value);
+					if (scr_t < limit_t){
+						$('.object-1').css({'transform':'translateY('+value+'px)'});
+					}
+				}
+				$(window).on('scroll', function(){
+					scr_t = $(window).scrollTop();
+					parallex();
+				})
+			})
+		//-->
+	</script>
+</head>
+
+<body>
+	<div id="g-wrapper">
+		<script>include.header()</script>
+		<div id="g-container">
+			<script>include.aside.init()</script>
+
+			<!-- Content -->
+			<article id="g-content">
+				<div class="g-content-header">
+					<h1 class="g-h1">Parallex</h1>
+					<p class="g-explain-h1">마크업뷰중심 + 일부컨텐츠 </p>
+				</div>
+				<div class="g-content-body">
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Basic UI</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								
+								<div class="g-example-body">
+									<div class="g-example-preview"> 
+										<div class="parallex-area">
+											<div class="object-1">
+												Object
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+
+					<section style="min-height: 50rem;">
+
+					</section>
+				</div>
+			</article>
+			<!-- //Content -->
+
+			<script>include.quick.init()</script>
+		</div>
+		<script>include.footer()</script>
+	</div>
+</body>
+
+</html>

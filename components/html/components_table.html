@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="../_common/js/cp_include.js"></script>
+  <script>include.meta()</script>
+  <script>include.head()</script>
+</head>
+
+<body>
+  <div id="g-wrapper">
+    <script>include.header()</script>
+    <div id="g-container">
+      <script>include.aside.init()</script>
+
+      <!-- Content -->
+      <article id="g-content">
+        <div class="g-content-header">
+          <h1 class="g-h1">Table</h1>
+          <p class="g-explain-h1">Library Elements</p>
+        </div>
+        <div class="g-content-body">
+
+          <!-- Section -->
+          <section class="g-section g-in-sec">
+            <div class="g-section-header">
+              <h2 class="g-h2">Basic</h2>
+            </div>
+            <div class="g-section-body">
+              <div class="g-example-wrap">
+                <div class="g-example-body">
+                  <div class="tbl-group">
+                    <h4 class="g-h4">Columns Only</h4>
+                    <div class="tbl __basic">
+                      <table>
+                        <caption>
+                          <strong>제목 요약</strong>
+                          <p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.</p>
+                        </caption>
+                        <colgroup>
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:auto">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">셀제목1</th>
+                            <th scope="col">셀제목2</th>
+                            <th scope="col">셀제목3</th>
+                            <th scope="col">셀제목4</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                          <tr>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h4 class="g-h4">Rows Only</h4>
+                    <div class="tbl-group">
+                      <div class="tbl __basic">
+                        <table>
+                          <caption>
+                            <strong>제목 요약</strong>
+                            <p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.</p>
+                          </caption>
+                          <colgroup>
+                            <col style="width:25%">
+                            <col style="width:25%">
+                            <col style="width:25%">
+                            <col style="width:auto">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">셀내용</th>
+                              <td>셀내용</td>
+                              <th scope="row">셀내용</th>
+                              <td>셀내용</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">셀내용</th>
+                              <td>셀내용</td>
+                              <th scope="row">셀내용</th>
+                              <td>셀내용</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- //Section -->
+
+          <!-- Section -->
+          <section class="g-section g-in-sec">
+            <div class="g-section-header">
+              <h2 class="g-h2">Both</h2>
+            </div>
+            <div class="g-section-body">
+              <div class="g-example-wrap">
+                <div class="g-example-body">
+                  <!-- 마크업뷰영역 -->
+                  <div class="tbl-group">
+                    <h4 class="g-h4">Colgroup</h4>
+                    <div class="tbl __basic">
+                      <table>
+                        <caption>
+                          <strong>제목 요약</strong>
+                          <p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목3-1, 셀제목3-2 로 구성되었습니다.</p>
+                        </caption>
+                        <colgroup>
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:auto">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col" rowspan="2">셀제목1</th>
+                            <th scope="col" rowspan="2">셀제목2</th>
+                            <th scope="colgroup" colspan="2">셀제목3</th>
+                          </tr>
+                          <tr>
+                            <th scope="col">셀제목3-1</th>
+                            <th scope="col">셀제목3-2</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                          <tr>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <h4 class="g-h4">Rowgroup</h4>
+                  <div class="tbl-group">
+                    <div class="tbl __basic">
+                      <table>
+                        <caption>
+                          <strong>제목 요약</strong>
+                          <p>이 표는 셀제목1, 셀제목1-1, 셀제목1-2, 셀제목1-3 로 구성되었습니다.</p>
+                        </caption>
+                        <colgroup>
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="rowgroup" rowspan="3">셀제목1</th>
+                            <th scope="row">셀제목1-1</th>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">셀제목1-2</th>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">셀제목1-3</th>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="tbl-group">
+                    <h4 class="g-h4">Colored</h4>
+                    <div class="tbl __basic">
+                      <table>
+                        <caption>
+                          <strong>제목 요약</strong>
+                          <p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목3-1, 셀제목3-2 로 구성되었습니다.</p>
+                        </caption>
+                        <colgroup>
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:25%">
+                          <col style="width:auto">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col" rowspan="2">셀제목1</th>
+                            <th scope="col" rowspan="2">셀제목2</th>
+                            <th scope="colgroup" colspan="2">셀제목3</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="th-depth2">셀제목3-1</th>
+                            <th scope="col" class="th-depth2">셀제목3-2</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="rowgroup" rowspan="3">셀내용</th>
+                            <th scope="row" class="th-depth2">셀내용</th>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="th-depth2">셀내용</th>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="th-depth2">셀내용</th>
+                            <td>셀내용</td>
+                            <td>셀내용</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //마크업뷰영역 -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- //Section -->
+
+          <!-- Section -->
+          <section class="g-section g-in-sec">
+            <div class="g-section-header">
+              <h2 class="g-h2">Board</h2>
+            </div>
+            <div class="g-section-body">
+              <h3 class="g-h3">List</h3>
+              <div class="g-example-wrap">
+                <div class="g-example-body">
+                  <!-- 마크업뷰영역 -->
+                  <div class="tbl-group">
+                    <div class="tbl tbl-list">
+                      <table>
+                        <caption>
+                          <strong>게시판 목록</strong>
+                          <p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+                        </caption>
+                        <colgroup>
+                          <col style="width:8%" />
+                          <col style="width:auto" />
+                          <col style="width:12%" />
+                          <col style="width:12%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">작성일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>리튬이온 배터리 안전사용에 대하여 알려 드립니다.</td>
+                            <td>관리자</td>
+                            <td>2024-04-01</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>인텔社 CPU 펌웨어 업데이트에 대해 안내드립니다.</td>
+                            <td>관리자</td>
+                            <td>2024-04-01</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>휴대폰 유무선 충전 관련 안전 주의 사항</td>
+                            <td>관리자</td>
+                            <td>2017-05-04</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>고객지원 시스템 점검 안내 (3/4)</td>
+                            <td>관리자</td>
+                            <td>2018-02-28</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료</td>
+                            <td>관리자</td>
+                            <td>2014-11-06</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //마크업뷰영역 -->
+                </div>
+              </div>
+
+              <h3 class="g-h3">View</h3>
+              <div class="g-example-wrap">
+                <div class="g-example-body">
+                  <!-- 마크업뷰영역 -->
+                  <div class="tbl-group">
+                    <div class="tbl tbl-view">
+                      <table>
+                        <caption>
+                          <strong>게시판 상세</strong>
+                          <p>이 표는 제목, 작성자, 작성일로 구성되었습니다.</p>
+                        </caption>
+                        <colgroup>
+                          <col style="width:16%;">
+                          <col style="width:34%;">
+                          <col style="width:16%;">
+                          <col style="width:34%;">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">제목</th>
+                            <td colspan="3">리튬이온 배터리 안전사용에 대하여 알려 드립니다.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">작성자</th>
+                            <td>관리자</td>
+                            <th scope="row">작성일</th>
+                            <td>2024-04-01</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //마크업뷰영역 -->
+                </div>
+              </div>
+
+              <h3 class="g-h3">Pager</h3>
+              <div class="g-example-wrap">
+                <div class="g-example-body">
+                  <!-- 마크업뷰영역 -->
+                  <div class="tbl-group">
+                    <div class="tbl tbl-pager">
+                      <table>
+                        <caption>
+                          <strong>페이지 넘기기</strong>
+                          <p>이 표는 다음, 이전으로 구성되었습니다.</p>
+                        </caption>
+                        <colgroup>
+                          <col style="width:16%;">
+                          <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">이 전</th>
+                            <td>휴대폰 유무선 충전 관련 안전 주의 사항</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">다 음</th>
+                            <td>삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //마크업뷰영역 -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- //Section -->
+
+          <!-- Section -->
+          <section class="g-section g-in-sec">
+            <div class="g-section-header">
+              <h2 class="g-h2">Base Align</h2>
+            </div>
+            <div class="g-section-body">
+              <div class="g-example-wrap">
+                <div class="g-example-body">
+                  <!-- 마크업뷰영역 -->
+                  <h4 class="g-h4">Lefted</h4>
+                  <div class="tbl-group">
+                    <div class="tbl __basic tbl-left">
+                      <table>
+                        <caption></caption>
+                        <colgroup>
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1234567890</th>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1234567890</th>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1234567890</th>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <h4 class="g-h4">Centered</h4>
+                  <div class="tbl-group">
+                    <div class="tbl __basic tbl-center">
+                      <table>
+                        <caption></caption>
+                        <colgroup>
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">1234567890</th>
+                            <th scope="col">1234567890</th>
+                            <th scope="col">1234567890</th>
+                            <th scope="col">1234567890</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1234567890</th>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1234567890</th>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1234567890</th>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <h4 class="g-h4">Righted</h4>
+                  <div class="tbl-group">
+                    <div class="tbl __basic tbl-right">
+                      <table>
+                        <caption></caption>
+                        <colgroup>
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                          <col style="width:25%;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">1234567890</th>
+                            <th scope="col">1234567890</th>
+                            <th scope="col">1234567890</th>
+                            <th scope="col">1234567890</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                          <tr>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                          <tr>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //마크업뷰영역 -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- //Section -->
+        </div>
+      </article>
+      <!-- //Content -->
+
+      <script>include.quick.init()</script>
+    </div>
+    <script>include.footer()</script>
+  </div>
+</body>
+
+</html>

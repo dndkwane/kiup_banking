@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/cp_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
+</head>
+
+<body>
+	<div id="g-wrapper">
+		<script>include.header()</script>
+		<div id="g-container">
+			<script>include.aside.init()</script>
+
+			<!-- Content -->
+			<article id="g-content">
+				<div class="g-content-header">
+					<h1 class="g-h1">Folder</h1>
+					<p class="g-explain-h1">Library Modules</p>
+				</div>
+				<div class="g-content-body">
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Basic Folder</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<!-- 단일요소 폴더링 -->
+										<div class="box __basic">
+											<div class="box-head">
+											</div>
+											<div id="folder1" class="box-body fold-cont fold-focus">
+												folder-target
+											</div>
+											<button type="button" class="btn-ico fold-toggle" data-role="fold" aria-controls="folder1"
+												aria-expanded="false"><span><i class="arw arw-toggle">Example</i></span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">More Folder</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">Define</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<!-- 마크업뷰영역 -->
+									<div class="g-example-preview">
+										<!-- 더보기 폴더링 -->
+										<div class="box __basic">
+											<div class="box-head">
+											</div>
+											<div class="box-body">
+												<div id="folder2" class="fold-cont">
+													<dl>
+														<dt>folder-title</dt>
+														<dd>folder-define</dd>
+														<dt class="fold-hide" hidden><span class="fold-focus">folder-title</span></dt>
+														<dd class="fold-hide" hidden>folder-define</dd>
+														<dt class="fold-hide" hidden>folder-title</dt>
+														<dd class="fold-hide" hidden>folder-define</dd>
+													</dl>
+												</div>
+												<button type="button" class="fold-toggle" data-role="more" aria-controls="folder2"
+													aria-expanded="false"><span><i class="arw arw-toggle">Example</i></span></button>
+											</div>
+										</div>
+									</div>
+									<!-- //마크업뷰영역 -->
+								</div>
+							</div>
+						</div>
+
+						<div class="g-section-body">
+							<h3 class="g-h3">List Group</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit is-before"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+									</div>
+								</div>
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<style type="text/css">
+											.account-item {
+												padding: 10px 15px;
+												border: 1px solid #ddd;
+												border-radius: 5px;
+											}
+
+											.account-define:after {
+												content: '';
+												display: block;
+												clear: both;
+											}
+
+											.account-define>p {
+												float: left;
+												width: 33.33%;
+											}
+
+											.dv-android .folder-focus:focus {
+												outline: none;
+											}
+										</style>
+										<div class="account-list-wrap">
+											<div id="folder3" class="fold-cont">
+												<ul class="account-list">
+													<li class="account-item">
+														<div class="account-define">
+															<p aria-label="이름 : IBK기업은행">IBK기업은행</p>
+															<p aria-label="계좌이름 : 적금통장">적금통장</p>
+															<p aria-label="계좌잔액 : 1,000,000원">1,000,000원</p>
+														</div>
+													</li>
+													<li class="account-item" style="margin-top:10px">
+														<div class="account-define">
+															<p aria-label="이름 : IBK기업은행">IBK기업은행</p>
+															<p aria-label="계좌이름 : 예금통장">예금통장</p>
+															<p aria-label="계좌잔액 : 2,000,000원">2,000,000원</p>
+														</div>
+													</li>
+													<li class="account-item fold-hide" hidden style="margin-top:10px">
+														<div class="account-define">
+															<p aria-label="이름 : IBK기업은행" class="fold-focus">IBK기업은행</p><!-- 펼친 후 포커스 folder-focus -->
+															<p aria-label="계좌이름 : 예적금통장">예적금통장</p>
+															<p aria-label="계좌잔액 : 3,000,000원">3,000,000원</p>
+														</div>
+													</li>
+													<li class="account-item fold-hide" hidden style="margin-top:10px">
+														<div class="account-define">
+															<p aria-label="이름 : IBK기업은행">IBK기업은행</p>
+															<p aria-label="계좌이름 : 마이너스통장">마이너스통장</p>
+															<p aria-label="계좌잔액 : -1,000,000원">-1,000,000원</p>
+														</div>
+													</li>
+												</ul>
+												<button type="button" class="fold-toggle bg round centered-rb" data-role="more"
+													aria-controls="folder3" aria-expanded="false"><span><i
+															class="arw arw-toggle">Example</i></span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="g-section-body">
+							<h3 class="g-h3">Table Rows</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit is-before"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+									</div>
+								</div>
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<div id="folder4" class="fold-cont">
+											<div class="g-tbl __basic tbl-left"><!-- __emphasis th 강조 일경우 클래스 변경 -->
+												<table>
+													<colgroup>
+														<col style="width:150px;">
+														<col style="width:auto;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row">이름</th>
+															<td>IBK기업은행</td>
+														</tr>
+														<tr>
+															<th scope="row">국적</th>
+															<td>대한민국</td>
+														</tr>
+														<tr class="fold-hide" hidden>
+															<th scope="row"><span class="fold-focus">생일</span></th><!-- 펼친 후 포커스 folder-focus -->
+															<td>2024-01-31</td>
+														</tr>
+														<tr class="fold-hide" hidden>
+															<th scope="row">혈액형</th>
+															<td>O형</td>
+														</tr>
+														<tr class="fold-hide" hidden>
+															<th scope="row">취미</th>
+															<td>테니스</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<button type="button" class="fold-toggle bg round" data-role="more" aria-controls="folder4"
+												aria-expanded="false"><span><i class="arw arw-toggle">Example</i></span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+				</div>
+			</article>
+			<!-- //Content -->
+
+			<script>include.quick.init()</script>
+		</div>
+		<script>include.footer()</script>
+	</div>
+</body>
+
+</html>

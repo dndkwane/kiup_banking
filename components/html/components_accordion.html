@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/cp_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
+</head>
+
+<body>
+	<div id="g-wrapper">
+		<script>include.header()</script>
+		<div id="g-container">
+			<script>include.aside.init()</script>
+
+			<!-- Content -->
+			<article id="g-content">
+				<div class="g-content-header">
+					<h1 class="g-h1">Accordion</h1>
+					<p class="g-explain-h1">Library Modules</p>
+				</div>
+				<div class="g-content-body">
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+
+						<div class="g-section-body">
+							<h3 class="g-h2">Basic</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<ul class="acco __basic">
+											<li class="acco-item">
+												<div class="acco-title">
+													<button type="button" id="accoTitle11" class="btn acco-toggle" aria-controls="accoContent11"
+														aria-expanded="false">
+														<span class="acco-label">acco-title11</span>
+														<i class="arw arw-toggle"></i>
+													</button>
+												</div>
+												<div id="accoContent11" class="acco-cont" aria-labelledby="accoTitle11">
+													acco-content11
+												</div>
+											</li>
+											<li class="acco-item">
+												<div class="acco-title">
+													<button type="button" id="accoTitle12" class="btn acco-toggle" aria-controls="accoContent12"
+														aria-expanded="false">
+														<span class="acco-label">acco-title12</span>
+														<i class="arw arw-toggle"></i>
+													</button>
+												</div>
+												<div id="accoContent12" class="acco-cont" aria-labelledby="accoTitle12">
+													acco-content12
+												</div>
+											</li>
+											<li class="acco-item">
+												<div class="acco-title">
+													<button type="button" id="accoTitle13" class="btn acco-toggle" aria-controls="accoContent13"
+														aria-expanded="false" disabled>
+														<span class="acco-label">acco-title13</span>
+														<i class="arw arw-toggle"></i>
+													</button>
+												</div>
+												<div id="accoContent13" class="acco-cont" aria-labelledby="accoTitle13">
+													acco-content13
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+				</div>
+			</article>
+			<!-- //Content -->
+
+			<script>include.quick.init()</script>
+		</div>
+		<script>include.footer()</script>
+
+	</div>
+</body>
+
+</html>

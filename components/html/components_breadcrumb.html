@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../_common/js/cp_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Breadcrumb</h1>
+				<p class="g-explain-h1">마크업뷰중심 + 일부컨텐츠 </p>
+			</div>
+			<div class="g-content-body">
+				
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="breadcrumb">
+										<span class="item">HOME</span>
+										<span class="item"><i class="arw arw-breadcrumb"></i>회사소개</span>
+										<span class="item is-current" aria-current="page"><i class="arw arw-breadcrumb"></i>연혁</span>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="breadcrumb">
+										&lt;span class="item">HOME&lt;/span>
+										&lt;span class="item">&lt;i class="arw arw-breadcrumb1 dark">&lt;/i>회사소개&lt;/span>
+										&lt;span class="item is-current" aria-current="page">&lt;i class="arw arw-breadcrumb1 dark">&lt;/i>연혁&lt;/span>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## Breadcrumb
+									----------------------------------------------------------------- --*/
+									/* Style */
+									.breadcrumb {position:relative; display:inline-block; margin:0 -10px; overflow:hidden; line-height:1; @extend %clear;}
+									.breadcrumb .item {position:relative; float:left; padding:0 10px 0 16px;vertical-align:middle;}
+									.breadcrumb .item.is-current {color:$color-primary;}
+									.breadcrumb .arw {@extend .centered-l; margin-top:1px;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec" style="display:none">
+					<div class="g-section-header">
+						<h2 class="g-h2">Select</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Heading</h3>
+						<div class="g-example-wrap">
+							
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="breadcrumb-wrap">
+										<div class="breadcrumb-select">
+											<div class="dropdown dropdown-basic">
+												<button type="button" class="btn dropdown-toggle" aria-controls="menuDepth1" aria-expended="false"><span>Menu1-1</span><i class="arw arw-toggle1 dark"></i></button>
+												<div id="menuDepth1" class="dropdown-menu dropdown-select">
+													<ul>
+														<li class="is-current"><a href="#">Menu1-1</a></li>
+														<li><a href="#">Menu1-2</a></li>
+														<li><a href="#">Menu1-3</a></li>
+														<li><a href="#">Menu1-4</a></li>
+														<li><a href="#">Menu1-5</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="dropdown dropdown-basic">
+												<button type="button" class="btn dropdown-toggle" aria-controls="menuDepth2" aria-expended="false"><span>Menu2-1</span><i class="arw arw-toggle1 dark"></i></button>
+												<div id="menuDepth2" class="dropdown-menu dropdown-select">
+													<ul>
+														<li class="is-current"><a href="#">Menu2-1</a></li>
+														<li><a href="#">Menu2-2</a></li>
+														<li><a href="#">Menu2-3</a></li>
+														<li><a href="#">Menu2-4</a></li>
+														<li><a href="#">Menu2-5</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="dropdown dropdown-basic">
+												<button type="button" class="btn dropdown-toggle" aria-current="" aria-controls="menuDepth3" aria-expended="false"><span>Menu3-1</span><i class="arw arw-toggle1 dark"></i></button>
+												<div id="menuDepth3" class="dropdown-menu dropdown-select">
+													<ul>
+														<li class="is-current"><a href="#">Menu3-1</a></li>
+														<li><a href="#">Menu3-2</a></li>
+														<li><a href="#">Menu3-3</a></li>
+														<li><a href="#">Menu3-4</a></li>
+														<li><a href="#">Menu3-5</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

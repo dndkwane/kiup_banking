@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/cp_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
+</head>
+
+<body>
+	<div id="g-wrapper">
+		<script>include.header()</script>
+		<div id="g-container">
+			<script>include.aside.init()</script>
+
+			<!-- Content -->
+			<article id="g-content">
+				<div class="g-content-header">
+					<h1 class="g-h1">Popup</h1>
+					<p class="g-explain-h1">Library Modules</p>
+				</div>
+				<div class="g-content-body">
+
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Basic</h2>
+						</div>
+						<div class="g-section-body">
+							<!-- <h3 class="g-h3">Popup</h3> -->
+							<div class="g-example-wrap">
+								
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<button type="button" class="btn button popup-open" aria-controls="popupContent" aria-haspopup="dialog" onclick="ui.popup.open('popupContent', this);">
+											<span>Basic Popup</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">data-popup</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<button type="button" class="btn button popup-open" onclick="ui.popup.open('popupContent', this);"><span>Content Popup</span></button>
+										<br /><br />
+										<button type="button" class="btn button popup-open" onclick="ui.popup.open('popupAlert', this);"><span>Alert Popup</span></button>
+										<br /><br />
+										<button type="button" class="btn button popup-open" onclick="ui.popup.open('popupSelect', this);"><span>Select Popup</span></button>
+										<br /><br />
+										<button type="button" class="btn button popup-open" onclick="ui.popup.open('popupFull', this);"><span>Full Popup</span></button>
+										<br /><br />
+										<button type="button" class="btn button popup-open"	onclick="ui.popup.open('popupResponsive', this);"disabled><span>Responsive Popup</span></button>
+										<!-- (기본구현 생략 : 이슈 발생시 조치) -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+				</div>
+			</article>
+			<!-- //Content -->
+
+			<script>include.quick.init()</script>
+		</div>
+		<script>include.footer()</script>
+
+		<!-- 모달공통 -->
+		<div id="popupContent" class="popup-wrap" data-popup="content" role="dialog" aria-modal="true" aria-labelledby="popupContentTitle" hidden>
+			<div class="popup popup-basic popup-focus">
+				<div class="popup-inner">
+					<div class="popup-head">
+						<h3 id="popupContentTitle" class="popup-title">Content Popup</h3>
+					</div>
+					<div class="popup-body">
+						Content
+					</div>
+					<div class="popup-foot">
+						popup-footer
+					</div>
+				</div>
+				<button type="button" class="btn-ico popup-close" aria-controls="popupContent" title="제목 팝업닫기"
+					onclick="ui.popup.close('popupContent')"><span><i class="icon __close">Close</i></span></button>
+			</div>
+		</div>
+		<!-- 모달공통 -->
+		<div id="popupAlert" class="popup-wrap" data-popup="alert" role="alertdialog" aria-describedby="popupAlertDesc"
+			hidden>
+			<div class="popup popup-basic">
+				<div class="popup-inner">
+					<div class="popup-head" hidden>
+						<h3 class="popup-title">Alert Popup</span></h3>
+					</div>
+					<div class="popup-body">
+						<p id="popupAlertDesc"><span class="popup-focus">popup-body</span></p>
+					</div>
+				</div>
+				<button type="button" class="btn-ico popup-close" aria-controls="popupAlert" title="제목 팝업닫기"
+					onclick="ui.popup.close('popupAlert')"><span><i class="icon __close">Close</i></span></button>
+			</div>
+		</div>
+		<!-- 모달공통 -->
+		<div id="popupSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle"
+			hidden>
+			<div class="popup popup-basic">
+				<div class="popup-inner">
+					<div class="popup-head">
+						<h3 id="popupSelectTitle" class="popup-title popup-focus">popup-title</span></h3>
+					</div>
+					<div class="popup-menu">
+						<ul class="popup-list" role="listbox">
+							<li role="option">popup-list</li>
+							<li role="option">popup-list</li>
+							<li role="option">popup-list</li>
+						</ul>
+					</div>
+				</div>
+				<button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기"
+					onclick="ui.popup.close('popupSelect')"><span><i class="icon __close">Close</i></span></button>
+			</div>
+		</div>
+		<!-- 모달공통 -->
+		<div id="popupFull" class="popup-wrap" data-popup="full" role="dialog" aria-labelledby="popupFullTitle" hidden>
+			<div class="popup popup-basic">
+				<div class="popup-inner">
+					<div class="popup-head">
+						<h3 id="popupFullTitle" class="popup-title popup-focus">Full Popup</span></h3>
+					</div>
+					<div class="popup-body">
+						popup-body
+					</div>
+				</div>
+				<button type="button" class="btn-ico popup-close" aria-controls="popupFull" title="제목 팝업닫기"
+					onclick="ui.popup.close('popupFull')"><span><i class="icon __close">Close</i></span></button>
+			</div>
+		</div>
+		<!-- 모달공통 -->
+		<div id="popupResponsive" class="popup-wrap" data-popup="reponsive" role="dialog" aria-labelledby="popupRespTitle"
+			hidden>
+			<div class="popup popup-basic">
+				<div class="popup-inner">
+					<div class="popup-head">
+						<h3 id="popupRespTitle" class="popup-title popup-focus">Responsive Popup</span></h3>
+					</div>
+					<div class="popup-body">
+						popup-body
+					</div>
+				</div>
+				<button type="button" class="btn-ico popup-close" aria-controls="popupResponsive" title="제목 팝업닫기"
+					onclick="ui.popup.close('popupResponsive')"><span><i class="icon __close">Close</i></span></button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+				$('.dimmer').on('click', function() {
+						console.log('Dimmer 클릭됨');
+				});
+		});
+	</script>
+</body>
+</html>

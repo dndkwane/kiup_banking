@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/rule_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
+</head>
+
+<body>
+	<div class="g-wrapper" class="g-convention-wrap">
+		<script>include.header()</script>
+		<div class="g-container">
+			<script>include.aside.init()</script>
+
+			<!-- Content -->
+			<article class="g-content">
+				<div class="g-content-header">
+					<h1 class="g-h1">설계규칙</h1>
+				</div>
+				<div class="g-content-body">
+					<section class="g-section">
+						<div class="g-section-header">
+							<h2 class="g-h2">HTML</h2>
+						</div>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#tabContentCode1-1" class="g-example-btn is-active">Document</a>
+									<a href="#tabContentCode1-2" class="g-example-btn">Wrapper</a>
+									<a href="#tabContentCode1-3" class="g-example-btn">Popup</a>
+								</div>
+							</div>
+							<div id="tabContentCode1-1" class="g-example-footer is-active">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight">
+											<pre>
+<code class="language-html">
+&lt;!DOCTYPE html>
+&lt;head>
+&lt;meta charset="utf-8">
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+&lt;meta name="title" content="dndmobile">
+&lt;meta name="keywords" content="dndmobile">
+&lt;meta name="description" content="dndmobile">
+&lt;title>분류명 - 페이지명 | dndmobile &lt;/title>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html>
+
+</code>
+												</pre>
+											</div>
+										</div>
+									</section>
+							</div>
+							<div id="tabContentCode1-2" class="g-example-footer">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight"><pre>
+<code class="language-html">
+&lt;div class="wrapper">
+&lt;!-- Header -->
+&lt;header class="header">&lt;/header>
+&lt;!-- //Header -->
+
+&lt;!-- Container -->
+&lt;main role="main" class="container">
+	&lt;!-- Content -->
+	&lt;div id="content" class="content">
+		&lt;div class="content-head">&lt;/div>
+		&lt;div class="content-body">&lt;/div>
+	&lt;/div>
+	&lt;!-- //Content -->
+&lt;/main>
+&lt;!-- //Container -->
+
+&lt;!-- Footer -->
+&lt;footer class="footer">&lt;/footer>
+&lt;!-- //Footer -->
+&lt;/div>
+</code>
+											</pre>			
+										</div>
+								</section>
+							</div>
+							<div id="tabContentCode1-3" class="g-example-footer">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight">
+											<pre>
+<code class="language-html">
+&lt;!-- Popup --&gt;
+&lt;div class="popup_wrap" role="dialog" aria-modal="true">
+&lt;section class="popup">
+	&lt;div class="popup_head">&lt;/div>
+	&lt;div class="popup_body">&lt;/div>
+	&lt;div class="popup_foot">&lt;/div>
+	&lt;div class="popup_close">&lt;/div>
+&lt;/section>
+&lt;/div>
+&lt;!-- //Popup --&gt;
+</code>
+											</pre>
+										</div>
+								</section>
+							</div>
+						</div>
+					</section>
+					<!-- // HTML -->
+				
+					<section class="g-section">
+						<div class="g-section-header">
+							<h2 class="g-h2">CSS</h2>
+						</div>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#tabContentCode2-1" class="g-example-btn is-active">Document</a>
+									<a href="#tabContentCode2-2" class="g-example-btn">Components</a>
+									<a href="#tabContentCode2-3" class="g-example-btn">Contents</a>
+									<a href="#tabContentCode2-4" class="g-example-btn">Main</a>
+								</div>
+							</div>
+							<div id="tabContentCode2-1" class="g-example-footer is-active">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight">
+											<pre>
+<code class="language-css">
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 초기화
+	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@웹폰트
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@태그
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	분류그룹 : 유틸리티
+	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@General
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@Grid System
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@Color Set
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	파일이름 : 레이아웃
+	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@공통
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@서브공통
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@서브메인
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@메인
+-------------------------------------------------------------------*/
+
+</code>
+												</pre>
+											</div>
+										</div>
+									</section>
+							</div>
+							<div id="tabContentCode2-2" class="g-example-footer">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight"><pre>
+<code class="language-css">
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	파일이름 : 컴포넌트
+	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@Forms
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@Buttons
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+	@컴포넌트
+-------------------------------------------------------------------*/
+</code>
+											</pre>			
+										</div>
+								</section>
+							</div>
+							<div id="tabContentCode2-3" class="g-example-footer">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight">
+											<pre>
+<code class="language-css">
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	파일이름 : 컨텐츠 스타일
+	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@공통화면
+-------------------------------------------------------------------*/
+/* 화면명 */
+
+/*-------------------------------------------------------------------
+	@메뉴명
+-------------------------------------------------------------------*/
+/* 서브메뉴명 > 화면명 */
+
+/*-------------------------------------------------------------------
+	@Popup
+-------------------------------------------------------------------*/
+/* 메뉴명 > 화면명 > 팝업명 */
+</code>
+											</pre>
+										</div>
+								</section>
+							</div>
+							<div id="tabContentCode2-4" class="g-example-footer">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight">
+											<pre>
+<code class="language-css">
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	파일이름 : 메인, 서브메인
+	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@메인
+-------------------------------------------------------------------*/
+/* 공통 */
+
+/* 섹션 */
+
+/*-------------------------------------------------------------------
+	@서브메인
+-------------------------------------------------------------------*/
+/* 공통 */
+
+/* 섹션 */
+</code>
+											</pre>
+										</div>
+								</section>
+							</div>
+						</div>
+					</section>
+					<!-- // CSS -->
+
+					<section class="g-section">
+						<div class="g-section-header">
+							<h2 class="g-h2">JAVASCRIPT</h2>
+						</div>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#tabContentCode3-1" class="g-example-btn is-active">Common</a>
+								</div>
+							</div>
+							<div id="tabContentCode3-1" class="g-example-footer is-active">
+								<section class="g-section">
+									<div class="g-section-body">
+										<div class="highlight">
+											<pre>
+<code class="language-js">
+/*--------------------------------------------------------------
+	분류순서
+	@Variables  : 전역변수
+	@Settings   : 기본설정
+	@Utility    : 유틸리티
+	@Layout     : 레이아웃
+	@Components : 공통모듈
+	@Content    : 컨텐츠
+	@Init       : 초기실행
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+	@Variables
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	@Settings
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	@Utilites
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	@Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	@Components
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	@Contents
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	@Inits
+--------------------------------------------------------------*/
+/* Setting */
+function set_init(){}
+
+/* UI */
+function ui_init(){}
+
+/* Ready */
+$(function(){
+	set_init();
+	ui_init();
+});
+
+</code>
+												</pre>
+											</div>
+										</div>
+									</section>
+							</div>
+						</div>
+					</section>
+					<!-- // JS -->
+				</div>
+			</article>
+			<!-- //Content -->
+		</div>
+		<script>
+			include.footer()
+		</script>
+	</div>
+
+	<script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../_common/js/cp_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Bullet</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+			
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">특수문자</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ul class="bullets hyphen">
+									<li>목록 텍스트</li>
+								</ul>
+								<br />
+								<ul class="bullets star">
+									<li>목록 텍스트</li>
+								</ul>
+								<br />
+								<ul class="bullets bill">
+									<li>목록 텍스트</li>
+								</ul>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- 하이픈 -->
+									<ul class="bullets hyphen">
+										<li>목록 텍스트</li>
+									</ul>
+
+									<!-- 스타 -->
+									<ul class="bullets star">
+										<li>목록 텍스트</li>
+									</ul>
+
+									<!-- 당구장 -->
+									<ul class="bullets bill">
+										<li>목록 텍스트</li>
+									</ul>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* 특수문자 */
+									.hyphen > li::before, .hyphen > p::before {content:'-';}
+									.star > li::before, .star > p::before {content:'*';}
+									.bill > li::before, .bill > p::before {content:'※';}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">순서있는 목록</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">숫자</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ol class="bullets num1">
+									<li>목록 텍스트
+										<ol class="bullets num2">
+											<li>목록 텍스트
+												<ol class="bullets num3">
+													<li>목록 텍스트
+														<ol class="bullets num4">
+															<li>목록 텍스트
+															</li>
+														</ol>
+													</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<ol class="bullets num1">
+										<li>목록 텍스트
+											<ol class="bullets num2">
+												<li>목록 텍스트
+													<ol class="bullets num3">
+														<li>목록 텍스트
+															<ol class="bullets num4">
+																<li>목록 텍스트
+																</li>
+															</ol>
+														</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">한글</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ol class="bullets kor1">
+									<li>목록 텍스트
+										<ol class="bullets kor2">
+											<li>목록 텍스트
+												<ol class="bullets kor3">
+													<li>목록 텍스트</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<ol class="bullets kor1">
+										<li>목록 텍스트
+											<ol class="bullets kor2">
+												<li>목록 텍스트
+													<ol class="bullets kor3">
+														<li>목록 텍스트</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">영어</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ol class="bullets eng1">
+									<li>목록 텍스트
+										<ol class="bullets eng2">
+											<li>목록 텍스트
+												<ol class="bullets eng3">
+													<li>목록 텍스트
+														<ol class="bullets eng4">
+															<li>목록 텍스트</li>
+														</ol>
+													</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<ol class="bullets eng1">
+										<li>목록 텍스트
+											<ol class="bullets eng2">
+												<li>목록 텍스트
+													<ol class="bullets eng3">
+														<li>목록 텍스트
+															<ol class="bullets eng4">
+																<li>목록 텍스트</li>
+															</ol>
+														</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</pre>
+							</div>
+							
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

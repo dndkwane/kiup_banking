@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/cp_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
+	<script type="text/javascript">
+		function fileAttach(obj) {
+			var $this = $(obj).closest('.form-file');
+			$this.find('[type=file]').trigger('click');
+			$this.find('[type=file]').not('.is-evented').on('change', function () {
+				var value = $(this).val();
+				$this.find('[type=text]').val(value);
+			}).addClass('is-evented');
+		}
+		jQuery(document).keydown(function (e) {
+			if (e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) {
+				e.preventDefault();
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div id="g-wrapper">
+		<script>include.header()</script>
+		<div id="g-container">
+			<script>include.aside.init()</script>
+
+			<!-- Content -->
+			<article id="g-content">
+				<div class="g-content-header">
+					<h1 class="g-h1">Form</h1>
+					<p class="g-explain-h1">Library Elements</p>
+				</div>
+				<div class="g-content-body">
+					<!-- Section -->
+					<section class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Form Controls</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">Radio</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<!-- Form radio -->
+										<span class="form-radio">
+											<input type="radio" name="iRadio10" id="iRadio11" value="" />
+											<label for="iRadio11"><span class="blind">Hidden</span></label>
+										</span>
+										<span class="form-radio">
+											<input type="radio" name="iRadio11" id="iRadio12" value="" />
+											<label for="iRadio12"><span>Radio1</span></label>
+										</span>
+										<span class="form-radio">
+											<input type="radio" name="iRadio11" id="iRadio13" value="" checked />
+											<label for="iRadio13"><span>Radio2</span></label>
+										</span>
+									</div>
+									<div class="g-example-preview">
+										<!-- Form radio -->
+										<span class="form-radio v-chk">
+											<input type="radio" name="iRadio16" id="testRadio1" value="" checked/>
+											<label for="testRadio1"><span>Radio1</span></label>
+										</span>
+										<span class="form-radio v-chk">
+											<input type="radio" name="iRadio16" id="testRadio2" value="" checked />
+											<label for="testRadio2"><span>Radio2</span></label>
+										</span>
+										<span class="form-radio v-chk">
+											<input type="radio" name="iRadio16" id="testRadio3" value="" disabled />
+											<label for="testRadio3"><span>disabled</span></label>
+										</span>
+									</div>
+								</div>
+							</div>
+							<h3 class="g-h3">Switch</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<span class="form-switch">
+											<input type="checkbox" name="sSwitch2" id="sSwitch21" value="" />
+											<label for="sSwitch21"></label>
+										</span>
+										<span class="form-switch">
+											<input type="checkbox" name="sSwitch2" id="sSwitch22" value="" checked />
+											<label for="sSwitch22"></label>
+										</span>
+										<span class="form-switch">
+											<input type="checkbox" name="sSwitch2" id="sSwitch23" value="" disabled />
+											<label for="sSwitch23"></label>
+										</span>
+										<span class="form-switch">
+											<input type="checkbox" name="sSwitch2" id="sSwitch24" value="" checked disabled />
+											<label for="sSwitch24"></label>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<h3 class="g-h3">Checkbox</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-body">
+									<div class="g-example-preview">
+										<span class="form-checkbox">
+											<input type="checkbox" name="sCheck11" id="sCheck11" value="" />
+											<label for="sCheck11"><span class="blind">Hidden</span></label>
+										</span>
+										<span class="form-checkbox">
+											<input type="checkbox" name="sCheck12" id="sCheck12" value="" />
+											<label for="sCheck12"><span>Checkbox1</span></label>
+										</span>
+										<span class="form-checkbox">
+											<input type="checkbox" name="sCheck12" id="sCheck13" value="" checked />
+											<label for="sCheck13"><span>Checkbox2</span></label>
+										</span>
+										<span class="form-checkbox">
+											<input type="checkbox" name="sCheck13" id="sCheck14" value="" disabled />
+											<label for="sCheck14"><span>disabled</span></label>
+										</span>
+										<span class="form-checkbox">
+											<input type="checkbox" name="sCheck13" id="sCheck15" value="" checked disabled />
+											<label for="sCheck15"><span>disabled</span></label>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section -->
+				</div>
+			</article>
+			<!-- //Content -->
+
+			<script>include.quick.init()</script>
+		</div>
+		<script>include.footer()</script>
+	</div>
+</body>
+</html>

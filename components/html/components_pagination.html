@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="../_common/js/cp_include.js"></script>
+  <script>include.meta()</script>
+  <script>include.head()</script>
+</head>
+
+<body>
+  <div id="g-wrapper">
+    <script>include.header()</script>
+    <div id="g-container">
+      <script>include.aside.init()</script>
+
+      <!-- Content -->
+      <article id="g-content">
+        <div class="g-content-header">
+          <h1 class="g-h1">paging</h1>
+          <p class="g-explain-h1">Library Elements</p>
+        </div>
+        <div class="g-content-body">
+          <!-- Section -->
+          <section class="g-section g-in-sec">
+            <div class="g-section-header">
+              <h2 class="g-h2">Basic</h2>
+            </div>
+            <div class="g-section-body">
+              <div class="g-example-wrap">
+                <div class="g-example-body">
+                  <div class="g-example-preview">
+                    <div class="paging __basic">
+                      <div class="inner">
+                        <div class="page-group">
+                          <button type="button" class="btn first" title="공지사항 처음 페이지" disabled="disabled"><span><i class="arw __board-first">처음</i></span></button>
+                          <button type="button" class="btn prev" title="공지사항 이전 페이지" disabled="disabled"><span><i class="arw __board-prev">이전</i></span></button>
+                        </div>
+                        <ul class="num-group">
+                          <li><button type="button" class="btn" title="공지사항 1 페이지"
+                              disabled="disabled"><span>1</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 2 페이지"><span>2</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 3 페이지"><span>3</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 4 페이지" aria-current="true"><span>4</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 5 페이지"><span>5</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 6 페이지"><span>6</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 7 페이지"><span>7</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 8 페이지"><span>8</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 9 페이지"><span>9</span></button></li>
+                          <li><button type="button" class="btn" title="공지사항 10 페이지"><span>10</span></button></li>
+                        </ul>
+                        <div class="page-group">
+                          <button type="button" class="btn next" title="공지사항 다음 페이지"><span><i
+                                class="arw __board-next">다음</i></span></button>
+                          <button type="button" class="btn last" title="공지사항 마지막 페이지"><span><i
+                                class="arw arw-board-last">마지막</i></span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- //Section -->
+        </div>
+      </article>
+      <!-- //Content -->
+
+      <script>include.quick.init()</script>
+    </div>
+    <script>include.footer()</script>
+  </div>
+</body>
+</html>
