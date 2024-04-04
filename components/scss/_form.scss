@@ -90,7 +90,9 @@ textarea.form-input {
     opacity: .75
   }
 }
-
+.dark-mode .form-select {
+  filter: brightness(0) invert(1);
+}
 .form-select {
   height: 45px;
   padding: 0 15px;
@@ -536,20 +538,23 @@ span.form-text {
 
 .form-alert {
   display: none;
-  color: #555
+  color: #555;
+
+  &.is-visibled {
+    display: block
+  }
+  
+  &.is-errored,
+  &.is-errored p {
+    color: red;
+  }
+  
+  &.is-successed,
+  &.is-successed p {
+    color: $main-blue;
+  }
 }
 
-.form-alert.is-visibled {
-  display: block
-}
-
-.form-alert.is-errored {
-  color: red;
-}
-
-.form-alert.is-successed {
-  color: $main-blue;
-}
 
 .form-desc {
   color: #555

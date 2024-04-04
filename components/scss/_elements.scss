@@ -358,7 +358,10 @@
 .icon-search {
   width: 2.4rem;
   height: 2.4rem;
-  @include image-style("../_common/img/icon/ico_search.svg", 2rem auto, no-repeat);  
+  @include image-style("../_common/img/icon/ico_search.svg", 1.8rem auto, no-repeat);  
+}
+.dark-mode .icon-search {
+  filter: brightness(0) invert(1);
 }
 
 .fold-cont {
@@ -402,6 +405,9 @@
   width: 2rem;
   height: 2rem;
   @include image-style("../_common/img/icon/arr_right.svg", 2rem auto, no-repeat, left, center);  
+}
+.dark-mode .arw-breadcrumb  {
+  filter: brightness(0) invert(1);
 }
 
 .list-toolbar {
@@ -478,7 +484,9 @@
       height: 6rem;
       margin-right: 2rem;
     }
-    
+    .dark-mode & .title {
+      color: var(--white-color);
+    }
     & .title {
       padding-right: 2.5rem;
       font-size: 1.6rem;
@@ -492,15 +500,15 @@
     }
     
     & .date {
-      font-size: 12px;
-      color: #666
+      font-size: 1.2rem;
+      color: #666;
     }
     
     & .info {
       @include flex(row,left,center);
       align-items: center;
-      font-size: 12px;
-      color: #666
+      font-size: 1.2rem;
+      color: #666;
     }
   }
   
@@ -538,7 +546,7 @@
   & .step-item {
     display: table-cell;
     position: relative;
-    z-index: 1
+    z-index: 1;
   }
   
   & .step-label {
@@ -870,7 +878,9 @@
 	Arrow
 -------------------------------------------------------------------*/
 
-
+.dark-mode .arw-toggle {
+  filter: brightness(0) invert(1);
+}
 .arw-toggle {
   width: 2.5rem;
   height: 2.5rem;
@@ -1068,7 +1078,6 @@ button.fold-toggle {
       line-height: 13px;
       font-size: 1.3rem;
       background: #fff;
-      line-height: 1.5;
     }
     
     & table th {
@@ -1092,6 +1101,7 @@ button.fold-toggle {
     & table tbody th {
       border-bottom: 1px solid #eee;
       border-right: 1px solid #eee;
+      border-top: 1px solid #eee;
     }
   }
 
@@ -1568,7 +1578,7 @@ button.fold-toggle {
   
     & .is-selected a {
       background: $main-blue;
-      color: #fff
+      color: #fff;
     }
   }
 }
@@ -2279,61 +2289,6 @@ html,body,.wrapper {
   height: 100%
 }
 
-.sidebar {
-  display: none;
-  position: absolute;
-  z-index: 1001;
-  left: -200px;
-  width: 200px;
-  height: 100%;
-  padding: 20px;
-  background-color: #000
-}
-
-.header {
-/*   position: absolute;
-  z-index: 103;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd */
-}
-
-.container {
-/*   min-height: 100%;
-  padding: 72px 0 40px;
-  background-color: #eee */
-}
-
-.header-inner {
-  height: 100%
-}
-
-.footer-inner {
-  max-width: 100%
-}
-
-.header.sticky {
-  position: fixed;
-  transition: height .3s ease
-}
-
-.is-scrolled .header.sticky {
-  height: 50px
-}
-
-.header-logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  & .logo {
-    color: #000;
-    font-size: 2rem    
-  }
-}
 
 @include res--mobile(){
   .header.sticky .header-logo {
@@ -2452,4 +2407,80 @@ img.img-cover {
   margin-right: 5px;
   background-color: #666;
   vertical-align: middle;
+}
+
+/* dark mode */
+.dark-mode-wrapper {
+  &.dark-mode {
+    * {
+      color: white;
+    }
+    button {
+      /* color: var(--text-color); */
+    }
+    #g-header {
+      background-color: var(--bg-color);
+      border-bottom: 1px solid var(--text-color);
+    }
+    #g-aside {
+      border-right: 1px solid var(--text-color);
+      background-color: var(--bg-color);
+    }
+    & .__white,
+    & .__gray {
+      color: var(--text-color);
+    }
+
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
+
+    --bg-color : #242323;
+    --text-color : #353535;
+    --white-color : #fff;
+    
+    h1,h2,h3,h4,h5,
+    .g-logo a,
+    .item-list .primary-area .info,
+    .item-list .primary-area .date,
+    .tab-nav.__basic li.is-selected a span {
+      color: var(--white-color);
+    }
+    .step-item,
+    .step-label {
+      color: #222;
+    }
+    .fold-focus,
+    .g-tbl.__basic table td,
+    .tooltip-inner,
+    .drop-item a,
+    .tab-nav.__basic a span,
+    .popup-wrap.is-active .popup *,
+    .dark-mode-btn {
+      color: var(--bg-color);
+    }
+
+  }
+  &.light-mode {
+    --bg-color : white;
+    --text-color : black;
+  }
+}
+.dark-mode-btn {
+  position: fixed;
+  right: 2rem;
+  bottom: 7rem;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 5rem;
+  background-color: #e7e7e7;
+  color: black;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 10px;
 }

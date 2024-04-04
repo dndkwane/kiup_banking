@@ -360,9 +360,13 @@
   width: 2.4rem;
   height: 2.4rem;
   background-image: url("../_common/img/icon/ico_search.svg");
-  background-size: 2rem auto;
+  background-size: 1.8rem auto;
   background-repeat: no-repeat;
   background-position: 50%, 50%;
+}
+
+.dark-mode .icon-search {
+  filter: brightness(0) invert(1);
 }
 
 .fold-cont {
@@ -408,6 +412,10 @@
   background-size: 2rem auto;
   background-repeat: no-repeat;
   background-position: left, center;
+}
+
+.dark-mode .arw-breadcrumb {
+  filter: brightness(0) invert(1);
 }
 
 .list-toolbar {
@@ -478,6 +486,9 @@
   height: 6rem;
   margin-right: 2rem;
 }
+.dark-mode .item-list .primary-area .title {
+  color: var(--white-color);
+}
 .item-list .primary-area .title {
   padding-right: 2.5rem;
   font-size: 1.6rem;
@@ -493,7 +504,7 @@
   padding-right: 3.5rem;
 }
 .item-list .primary-area .date {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #666;
 }
 .item-list .primary-area .info {
@@ -502,7 +513,7 @@
   justify-content: left;
   align-items: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #666;
 }
 
@@ -802,6 +813,10 @@
 /*-------------------------------------------------------------------
 	Arrow
 -------------------------------------------------------------------*/
+.dark-mode .arw-toggle {
+  filter: brightness(0) invert(1);
+}
+
 .arw-toggle {
   width: 2.5rem;
   height: 2.5rem;
@@ -982,7 +997,6 @@ button.fold-toggle.rotate .arw-toggle {
   line-height: 13px;
   font-size: 1.3rem;
   background: #fff;
-  line-height: 1.5;
 }
 .g-tbl.__basic table th {
   padding: 3px 15px;
@@ -1001,6 +1015,7 @@ button.fold-toggle.rotate .arw-toggle {
 .g-tbl.__basic table tbody th {
   border-bottom: 1px solid #eee;
   border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 .g-tbl.__emphasis {
   overflow: hidden;
@@ -1981,61 +1996,6 @@ html, body, .wrapper {
   height: 100%;
 }
 
-.sidebar {
-  display: none;
-  position: absolute;
-  z-index: 1001;
-  left: -200px;
-  width: 200px;
-  height: 100%;
-  padding: 20px;
-  background-color: #000;
-}
-
-.header {
-  /*   position: absolute;
-    z-index: 103;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 72px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd */
-}
-
-.container {
-  /*   min-height: 100%;
-    padding: 72px 0 40px;
-    background-color: #eee */
-}
-
-.header-inner {
-  height: 100%;
-}
-
-.footer-inner {
-  max-width: 100%;
-}
-
-.header.sticky {
-  position: fixed;
-  transition: height 0.3s ease;
-}
-
-.is-scrolled .header.sticky {
-  height: 50px;
-}
-
-.header-logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.header-logo .logo {
-  color: #000;
-  font-size: 2rem;
-}
-
 @media screen and (max-width: 540px) {
   .header.sticky .header-logo {
     display: none;
@@ -2161,6 +2121,76 @@ img.img-cover {
   vertical-align: middle;
 }
 
+/* dark mode */
+.dark-mode-wrapper.dark-mode {
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--text-color);
+  --bg-color: #242323;
+  --text-color: #353535;
+  --white-color: #fff;
+}
+.dark-mode-wrapper.dark-mode * {
+  color: white;
+}
+.dark-mode-wrapper.dark-mode button {
+  /* color: var(--text-color); */
+}
+.dark-mode-wrapper.dark-mode #g-header {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--text-color);
+}
+.dark-mode-wrapper.dark-mode #g-aside {
+  border-right: 1px solid var(--text-color);
+  background-color: var(--bg-color);
+}
+.dark-mode-wrapper.dark-mode .__white, .dark-mode-wrapper.dark-mode .__gray {
+  color: var(--text-color);
+}
+.dark-mode-wrapper.dark-mode h1, .dark-mode-wrapper.dark-mode h2, .dark-mode-wrapper.dark-mode h3, .dark-mode-wrapper.dark-mode h4, .dark-mode-wrapper.dark-mode h5,
+.dark-mode-wrapper.dark-mode .g-logo a,
+.dark-mode-wrapper.dark-mode .item-list .primary-area .info,
+.dark-mode-wrapper.dark-mode .item-list .primary-area .date,
+.dark-mode-wrapper.dark-mode .tab-nav.__basic li.is-selected a span {
+  color: var(--white-color);
+}
+.dark-mode-wrapper.dark-mode .step-item,
+.dark-mode-wrapper.dark-mode .step-label {
+  color: #222;
+}
+.dark-mode-wrapper.dark-mode .fold-focus,
+.dark-mode-wrapper.dark-mode .g-tbl.__basic table td,
+.dark-mode-wrapper.dark-mode .tooltip-inner,
+.dark-mode-wrapper.dark-mode .drop-item a,
+.dark-mode-wrapper.dark-mode .tab-nav.__basic a span,
+.dark-mode-wrapper.dark-mode .popup-wrap.is-active .popup *,
+.dark-mode-wrapper.dark-mode .dark-mode-btn {
+  color: var(--bg-color);
+}
+.dark-mode-wrapper.light-mode {
+  --bg-color: white;
+  --text-color: black;
+}
+
+.dark-mode-btn {
+  position: fixed;
+  right: 2rem;
+  bottom: 7rem;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 5rem;
+  background-color: #e7e7e7;
+  color: black;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
 .form-button {
   height: 45px;
   padding: 0 15px;
@@ -2240,6 +2270,10 @@ textarea.form-input.form-input:disabled {
 textarea.form-input.form-input:disabled:hover {
   border-color: #999;
   opacity: 0.75;
+}
+
+.dark-mode .form-select {
+  filter: brightness(0) invert(1);
 }
 
 .form-select {
@@ -2621,16 +2655,13 @@ span.form-text {
   display: none;
   color: #555;
 }
-
 .form-alert.is-visibled {
   display: block;
 }
-
-.form-alert.is-errored {
+.form-alert.is-errored, .form-alert.is-errored p {
   color: red;
 }
-
-.form-alert.is-successed {
+.form-alert.is-successed, .form-alert.is-successed p {
   color: #004C9D;
 }
 
@@ -2906,4 +2937,80 @@ span.form-text {
 
 .form-input-group.type-search .form-input {
   padding-right: 40px;
+}
+
+/*-------------------------------------------------------------------
+	@Fonts
+-------------------------------------------------------------------*/
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-style: normal;
+  src: url("./fonts/Pretendard-Thin.eot");
+  src: url("./fonts/Pretendard-Thin.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-Thin.woff2") format("woff2"), url("./fonts/Pretendard-Thin.woff") format("woff"), url("./fonts/Pretendard-Thin.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-style: normal;
+  src: url("./fonts/Pretendard-ExtraLight.eot");
+  src: url("./fonts/Pretendard-ExtraLight.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-ExtraLight.woff2") format("woff2"), url("./fonts/Pretendard-ExtraLight.woff") format("woff"), url("./fonts/Pretendard-ExtraLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-style: normal;
+  src: url("./fonts/Pretendard-Light.eot");
+  src: url("./fonts/Pretendard-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-Light.woff2") format("woff2"), url("./fonts/Pretendard-Light.woff") format("woff"), url("./fonts/Pretendard-Light.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/Pretendard-Regular.eot");
+  src: url("./fonts/Pretendard-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-Regular.woff2") format("woff2"), url("./fonts/Pretendard-Regular.woff") format("woff"), url("./fonts/Pretendard-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/Pretendard-Medium.eot");
+  src: url("./fonts/Pretendard-Medium.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-Medium.woff2") format("woff2"), url("./fonts/Pretendard-Medium.woff") format("woff"), url("./fonts/Pretendard-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-style: normal;
+  src: url("./fonts/Pretendard-SemiBold.eot");
+  src: url("./fonts/Pretendard-SemiBold.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-SemiBold.woff2") format("woff2"), url("./fonts/Pretendard-SemiBold.woff") format("woff"), url("./fonts/Pretendard-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: bold;
+  font-style: normal;
+  src: url("./fonts/Pretendard-Bold.eot");
+  src: url("./fonts/Pretendard-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-Bold.woff2") format("woff2"), url("./fonts/Pretendard-Bold.woff") format("woff"), url("./fonts/Pretendard-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-style: normal;
+  src: url("./fonts/Pretendard-ExtraBold.eot");
+  src: url("./fonts/Pretendard-ExtraBold.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-ExtraBold.woff2") format("woff2"), url("./fonts/Pretendard-ExtraBold.woff") format("woff"), url("./fonts/Pretendard-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./fonts/Pretendard-Black.eot");
+  src: url("./fonts/Pretendard-Black.eot?#iefix") format("embedded-opentype"), url("./fonts/Pretendard-Black.woff2") format("woff2"), url("./fonts/Pretendard-Black.woff") format("woff"), url("./fonts/Pretendard-Black.ttf") format("truetype");
+  font-display: swap;
 }/*# sourceMappingURL=style.css.map */

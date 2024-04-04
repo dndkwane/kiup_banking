@@ -248,7 +248,7 @@
 -------------------------------------------------------------------*/
 /* Basic */
 #g-content {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 /*-------------------------------------------------------------------
@@ -265,14 +265,23 @@
 }
 
 .g-lnb > ul > li.is-current > a {
-  color: #004C9D;
+  color: #353535;
 }
-
+.dark-mode .g-lnb > ul > li.is-current > a {
+  color: var(--white-color);
+}
+.dark-mode .g-snb .g-depth1 .g-node1 > a {
+  color: white;
+}
 .g-snb .g-depth1 .g-node1 > a {
   color: #004C9D;
   font-weight: 700;
 }
-
+.dark-mode .g-snb .g-depth2 .g-node2.is-current > a,
+.dark-mode .g-snb .g-depth2 .g-node2 > a:focus,
+.dark-mode .g-snb .g-depth2 .g-node2 > a:hover{
+  color: white;
+}
 .g-snb .g-depth2 .g-node2.is-current > a,
 .g-snb .g-depth2 .g-node2 > a:focus,
 .g-snb .g-depth2 .g-node2 > a:hover {
@@ -315,12 +324,18 @@
 }
 
 .g-lnb > ul > li.is-current > a {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .g-example-wrap .g-example-header .g-example-btn,
 .g-example-wrap .g-example-header .g-example-copy {
   color: #fff;
+}
+
+.dark-mode .g-btn-aside:before,
+.dark-mode .g-btn-aside:after,
+.dark-mode .g-btn-aside span {
+  background-color: var(--white-color);
 }
 
 .g-btn-aside:before,
@@ -340,12 +355,12 @@
   }
 
   .g-lnb > .g-node-title {
-    color: #004C9D;
-    background-color: #fff;
+    color: #353535;
+    /* background-color: #fff; */
   }
 
   .g-lnb > ul {
-    background-color: #004C9D;
+    background-color: #353535;
   }
 
   .g-lnb > ul > li.is-current > a {
@@ -354,6 +369,9 @@
   }
 
   /* .g-lnb {height: 100%;} */
+  .dark-mode  .g-lnb > .g-node-title {
+    color: var(--white-color);
+  }
   .g-lnb > .g-node-title {
     display: inline-block;
     height: 100%;
@@ -391,7 +409,7 @@
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
-    width: 100%;
+    /* width: 100%; */
   }
 
   .is-aside-opened #g-content {
@@ -449,6 +467,7 @@
 /*-------------------------------------------------------------------
     @@ Gutter & Size
 -------------------------------------------------------------------*/
+
 /* Header Height */
 #g-header {
   height: 60px;
@@ -579,4 +598,8 @@
 
 .g-example-wrap .g-example-guide {
   border-top: 0;
+}
+
+.dark-mode .__basic th {
+  color: var(--bg-color);
 }

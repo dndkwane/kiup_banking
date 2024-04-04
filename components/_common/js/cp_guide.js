@@ -153,7 +153,7 @@ var gUI = {
 	init: function () {
 		this.winEvent();
 		this.scrolled.init();
-
+		
 		if ($('.g-js-scroll').length) {
 			this.mScroll.init();
 		}
@@ -217,6 +217,7 @@ var gUI = {
 			}
 		},
 	},
+	
 	scrolled: {
 		init: function () {
 			if ($('html').scrollTop() > 50) {
@@ -331,6 +332,40 @@ var gUI = {
 		}
 	}
 }
+
+var darkMode = {
+  init: function() {
+    this.applyTheme();
+    document.querySelector('.dark-mode-btn').addEventListener('click', this.toggleDarkMode.bind(this));
+		this.updateButtonText();
+  },
+  applyTheme: function() {
+    var theme = localStorage.getItem('theme');
+    if (theme) {
+      document.body.classList.add(theme);
+    } else {
+      document.body.classList.add('light-mode');
+    }
+  },
+  toggleDarkMode: function() {
+    var isLightMode = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLightMode ? 'dark-mode' : 'light-mode');
+    document.body.classList.toggle('light-mode');
+    document.body.classList.toggle('dark-mode');
+
+		this.updateButtonText();
+  },
+	updateButtonText: function() {
+    var darkModeBtn = document.querySelector('.dark-mode-btn');
+    var isLightMode = document.body.classList.contains('light-mode');
+    darkModeBtn.textContent = isLightMode ? 'Color' : 'Dark';
+  }
+};
+// darkMode 객체 초기화
+document.addEventListener('DOMContentLoaded', function() {
+  darkMode.init();
+});
+
 $(document).ready(function () {
 	gCom.init();
 	gUI.init();

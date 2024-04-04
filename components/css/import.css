@@ -41,110 +41,6 @@
   }
 }
 
-/*-------------------------------------------------------------------
-	@Fonts
--------------------------------------------------------------------*/
-
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 100;
-  font-style: normal;
-  src: url('./fonts/Pretendard-Thin.eot');
-  src: url('./fonts/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-Thin.woff2') format('woff2'),
-      url('./fonts/Pretendard-Thin.woff') format('woff'),
-      url('./fonts/Pretendard-Thin.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 200;
-  font-style: normal;
-  src: url('./fonts/Pretendard-ExtraLight.eot');
-  src: url('./fonts/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-ExtraLight.woff2') format('woff2'),
-      url('./fonts/Pretendard-ExtraLight.woff') format('woff'),
-      url('./fonts/Pretendard-ExtraLight.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 300;
-  font-style: normal;
-  src: url('./fonts/Pretendard-Light.eot');
-  src: url('./fonts/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-Light.woff2') format('woff2'),
-      url('./fonts/Pretendard-Light.woff') format('woff'),
-      url('./fonts/Pretendard-Light.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: normal;
-  font-style: normal;
-  src: url('./fonts/Pretendard-Regular.eot');
-  src: url('./fonts/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-Regular.woff2') format('woff2'),
-      url('./fonts/Pretendard-Regular.woff') format('woff'),
-      url('./fonts/Pretendard-Regular.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 500;
-  font-style: normal;
-  src: url('./fonts/Pretendard-Medium.eot');
-  src: url('./fonts/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-Medium.woff2') format('woff2'),
-      url('./fonts/Pretendard-Medium.woff') format('woff'),
-      url('./fonts/Pretendard-Medium.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 600;
-  font-style: normal;
-  src: url('./fonts/Pretendard-SemiBold.eot');
-  src: url('./fonts/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-SemiBold.woff2') format('woff2'),
-      url('./fonts/Pretendard-SemiBold.woff') format('woff'),
-      url('./fonts/Pretendard-SemiBold.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: bold;
-  font-style: normal;
-  src: url('./fonts/Pretendard-Bold.eot');
-  src: url('./fonts/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-Bold.woff2') format('woff2'),
-      url('./fonts/Pretendard-Bold.woff') format('woff'),
-      url('./fonts/Pretendard-Bold.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 800;
-  font-style: normal;
-  src: url('./fonts/Pretendard-ExtraBold.eot');
-  src: url('./fonts/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-ExtraBold.woff2') format('woff2'),
-      url('./fonts/Pretendard-ExtraBold.woff') format('woff'),
-      url('./fonts/Pretendard-ExtraBold.ttf') format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 900;
-  font-style: normal;
-  src: url('./fonts/Pretendard-Black.eot');
-  src: url('./fonts/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Pretendard-Black.woff2') format('woff2'),
-      url('./fonts/Pretendard-Black.woff') format('woff'),
-      url('./fonts/Pretendard-Black.ttf') format("truetype");
-  font-display: swap;
-}
-
 html,
 body {
   height: 100%;
@@ -588,6 +484,9 @@ select {
   transition: transform .25s ease
 }
 
+.dark-mode .gnb-dropdown .node2-menu {
+  background-color: transparent;
+}
 .gnb-dropdown .node2-menu {
   position: absolute;
   left: 50%;
@@ -1664,7 +1563,7 @@ ul.g-desc.g-gutter > li + li {margin-top:15px;}
 .g-item + .g-item {margin-top:20px;}
 
 /* Top */
-a.g-top {display:block; position:fixed; right:20px; bottom:20px; z-index: 10; width:50px; height:50px; background-color:#222; line-height:50px; color:#fff; border-radius:50%; text-align:center; font-size:1.5rem}
+a.g-top {display:block; position:fixed; right:20px; bottom:20px; z-index: 10; width:50px; height:50px; background-color:#353535; line-height:50px; color:#fff; border-radius:50%; text-align:center; font-size:1.5rem}
 
 /*-------------------------------------------------------------------
 	Codeview Edit
@@ -1726,3 +1625,59 @@ a.g-top {display:block; position:fixed; right:20px; bottom:20px; z-index: 10; wi
 /* Button */
 .ex-btn {display:inline-table; border:1px solid #ddd; border-radius:3px; padding:5px 10px; color:#555;}
 
+
+.sidebar {
+  display: none;
+  position: absolute;
+  z-index: 1001;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+  background-color: #000
+}
+
+.header {
+  position: absolute;
+  z-index: 103;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd
+}
+
+.container {
+  min-height: 100%;
+  padding: 72px 0 40px;
+  background-color: #eee
+}
+
+.header-inner {
+  height: 100%
+}
+
+.footer-inner {
+  max-width: 100%
+}
+
+.header.sticky {
+  position: fixed;
+  transition: height .3s ease
+}
+
+.is-scrolled .header.sticky {
+  height: 50px
+}
+
+.header-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  & .logo {
+    color: #000;
+    font-size: 2rem    
+  }
+}

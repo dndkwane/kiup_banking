@@ -40,7 +40,7 @@ var include = {
 	header : function(){
 		document.write('	<header id="g-header">');
 		document.write('		<div class="g-header-inner">');
-		document.write('			<h1 class="g-logo"><a href="/">퍼블리싱 가이드</a></h1>');
+		document.write('			<h1 class="g-logo"><a href="">퍼블리싱 가이드</a></h1>');
 		document.write('			<button type="button" class="g-btn-aside"><span>Menu</span></button>');
 		document.write('			<nav class="g-lnb">');
 		document.write('				<ul>');
@@ -243,9 +243,12 @@ var include = {
 			document.write('		</div>');
 			document.write('	</div>');
 		},
+		
 	},
 	footer : function(){
 		document.write('	<a href="#g-wrapper" class="g-top" data-role="spy-scroll">TOP</a>');
+		document.write('	<body class="dark-mode-wrapper">');
+		document.write('	<button class="dark-mode-btn">컬러모드</button>"');
 		document.write('	<div class="g-mask"></div>');
 	},
 }
