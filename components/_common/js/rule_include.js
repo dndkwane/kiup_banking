@@ -2,7 +2,7 @@ var gRootURL = {
 	root : '/components/',
 }
 var gRootIA = {
-	root: '../../../IBK_PL/project_list/',
+	root: '../../../pub_guide/project_list/',
 }
 var gRoot_com = {
 	root : '/components/_common/',

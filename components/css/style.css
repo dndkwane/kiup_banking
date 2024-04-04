@@ -1993,20 +1993,20 @@ html, body, .wrapper {
 }
 
 .header {
-  position: absolute;
-  z-index: 103;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  /*   position: absolute;
+    z-index: 103;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd */
 }
 
 .container {
-  min-height: 100%;
-  padding: 72px 0 40px;
-  background-color: #eee;
+  /*   min-height: 100%;
+    padding: 72px 0 40px;
+    background-color: #eee */
 }
 
 .header-inner {
