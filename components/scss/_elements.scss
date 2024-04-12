@@ -1,3 +1,11 @@
+/* reset */
+html {
+  scroll-behavior: smooth;
+  /* 62.5% of 16px browser font size is 10px */
+  /* 16px * 0.625 = 10px */
+  font-size: 62.5%;
+}
+
 /*-------------------------------------------------------------------
 	button
 -------------------------------------------------------------------*/
@@ -358,14 +366,15 @@
 .icon-search {
   width: 2.4rem;
   height: 2.4rem;
-  @include image-style("../_common/img/icon/ico_search.svg", 1.8rem auto, no-repeat);  
+  @include image-style("../_common/img/icon/ico_search.svg", 1.8rem auto, no-repeat);
+  
 }
 .dark-mode .icon-search {
   filter: brightness(0) invert(1);
 }
 
 .fold-cont {
-  font-size: 1.4rem;  
+  font-size: 1.4rem;
 }
 
 
@@ -2415,9 +2424,6 @@ img.img-cover {
     * {
       color: white;
     }
-    button {
-      /* color: var(--text-color); */
-    }
     #g-header {
       background-color: var(--bg-color);
       border-bottom: 1px solid var(--text-color);
@@ -2483,4 +2489,18 @@ img.img-cover {
   font-size: 1.4rem;
   cursor: pointer;
   margin-bottom: 10px;
+}
+
+/* chartjs */
+@include res--mobile(){
+  .chartjs-area canvas {
+    width: 100%;
+  }  
+}
+.chartjs-area {
+  max-width: 35rem;
+}
+.chartjs-area canvas {
+  width: 35rem;
+  height: 35rem;
 }

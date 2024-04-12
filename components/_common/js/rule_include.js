@@ -2,7 +2,7 @@ var gRootURL = {
 	root : '/components/',
 }
 var gRootIA = {
-	root: '../../../pub_guide/project_list/',
+	root: '../../../project_list/',
 }
 var gRoot_com = {
 	root : '/components/_common/',
@@ -17,7 +17,7 @@ var gURL = {
 
 var include = {
 	meta : function(){
-		document.write('<title>dndmobile - 퍼블리싱 가이드</title>');
+		document.write('<title>kiup_banking - 퍼블리싱 가이드</title>');
 		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />');
 		document.write('<link rel="shortcut icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');

@@ -15,7 +15,7 @@ var gBaseURL = {
 
 var include = {
 	meta : function(){
-		document.write('<title>dndmobile - 퍼블리싱 가이드</title>');
+		document.write('<title>kiup_banking - 퍼블리싱 가이드</title>');
 		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />');
 		document.write('<link rel="shortcut icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
@@ -26,6 +26,8 @@ var include = {
 		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
 		document.write('<link href="'+gRootURL.root+'css/import.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'js/libs/jquery-3.3.1.min.js"></script>');
+		document.write('<script src="'+gRootURL.root+'js/libs/chart.min.js"></script>');
+		document.write('<script src="'+gRootURL.root+'js/libs/chartjs-plugin-datalabels.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_utility.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_device.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_ui.js"></script>');
@@ -162,6 +164,7 @@ var include = {
 			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_sticky.html">Sticky</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_spyscroll.html">Spy Scroll</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_parallex.html">Parallex</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_chartjs.html">Chartjs</a></li>');
 
 			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_customscroll.html">Custom Scroll</a></li>');
 			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_sidebar.html">Sidebar</a></li>');
@@ -243,12 +246,11 @@ var include = {
 			document.write('		</div>');
 			document.write('	</div>');
 		},
-		
 	},
 	footer : function(){
 		document.write('	<a href="#g-wrapper" class="g-top" data-role="spy-scroll">TOP</a>');
 		document.write('	<body class="dark-mode-wrapper">');
-		document.write('	<button class="dark-mode-btn">컬러모드</button>"');
+		document.write('	<button class="dark-mode-btn">컬러모드</button>');
 		document.write('	<div class="g-mask"></div>');
 	},
 }

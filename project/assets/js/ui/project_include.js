@@ -5,22 +5,30 @@ var gBaseURL = {
 	_common : gRootURL.root+'assets/',
 	target : '',
 }
+var _root = '../';
+var gComponents = {
+	root : '../../components/'
+}
 
 var include = {
 	meta : function(){
-		document.write('<title>dndmobile - 퍼블리싱</title>');
+		document.write('<title>kiup_banking - 퍼블리싱</title>');
 		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />');
 		document.write('<link rel="shortcut icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
 		document.write('<link rel="icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
 	},
-	head : function(){
-		document.write('<!-- Front -->');
-		document.write('<link href="'+gRootURL.root+'assets/css/style.css" rel="stylesheet" />');
-		document.write('<link href="'+gRootURL.root+'assets/css/base.css" rel="stylesheet" />');
-		document.write('<link href="'+gRootURL.root+'../components/css/style.css" rel="stylesheet" />');
+	head : function(){		
+		document.write('<link href="'+gRootURL.root+'assets/css/common.css" rel="stylesheet" />');
+		document.write('<link href="'+gRootURL.root+'assets/css/reset.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'assets/js/libs/jquery.min.js"></script>');
-	
+		document.write('<script src="'+gRootURL.root+'assets/js/ui/ui.common.js"></script>');
+		document.write('<script src="'+gComponents.root+'js/pub/pub_ui.js"></script>');
+		document.write('<script src="'+gComponents.root+'js/pub/pub_utility.js"></script>');
+		document.write('<script src="'+gComponents.root+'js/pub/pub_device.js"></script>');
+		document.write('<script src="'+gComponents.root+'js/libs/swiper-bundle.min.js"></script>');
+		document.write('<script src="'+gComponents.root+'js/libs/chart.min.js"></script>');
+		document.write('<script src="'+gComponents.root+'js/libs/moment.js"></script>');
 	},
 	quick : {
 		init : function(){

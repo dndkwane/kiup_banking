@@ -107,7 +107,6 @@ var gCom = {
 		maskEl: '.g-mask',
 		asideWid: null,
 
-
 		init: function () {
 			if (location.hash != '') {
 				gUI.spyScroll.action(location.hash);
@@ -148,12 +147,13 @@ var gCom = {
 		}
 	}
 }
+// gCom
 
 var gUI = {
 	init: function () {
 		this.winEvent();
 		this.scrolled.init();
-		
+
 		if ($('.g-js-scroll').length) {
 			this.mScroll.init();
 		}
@@ -217,7 +217,7 @@ var gUI = {
 			}
 		},
 	},
-	
+
 	scrolled: {
 		init: function () {
 			if ($('html').scrollTop() > 50) {
@@ -332,41 +332,219 @@ var gUI = {
 		}
 	}
 }
+//gUI
 
 var darkMode = {
-  init: function() {
-    this.applyTheme();
-    document.querySelector('.dark-mode-btn').addEventListener('click', this.toggleDarkMode.bind(this));
+	init: function () {
+		this.applyTheme();
+		$('.dark-mode-btn').on('click', this.toggleDarkMode.bind(this));
 		this.updateButtonText();
-  },
-  applyTheme: function() {
-    var theme = localStorage.getItem('theme');
-    if (theme) {
-      document.body.classList.add(theme);
-    } else {
-      document.body.classList.add('light-mode');
-    }
-  },
-  toggleDarkMode: function() {
-    var isLightMode = document.body.classList.contains('light-mode');
-    localStorage.setItem('theme', isLightMode ? 'dark-mode' : 'light-mode');
-    document.body.classList.toggle('light-mode');
-    document.body.classList.toggle('dark-mode');
-
+	},
+	applyTheme: function () {
+		var theme = localStorage.getItem('theme');
+		if (theme) {
+			$('body').addClass(theme);
+		} else {
+			$('body').addClass('light-mode');
+		}
+	},
+	toggleDarkMode: function () {
+		var isLightMode = $('body').hasClass('light-mode');
+		localStorage.setItem('theme', isLightMode ? 'dark-mode' : 'light-mode');
+		$('body').toggleClass('light-mode dark-mode');
 		this.updateButtonText();
-  },
-	updateButtonText: function() {
-    var darkModeBtn = document.querySelector('.dark-mode-btn');
-    var isLightMode = document.body.classList.contains('light-mode');
-    darkModeBtn.textContent = isLightMode ? 'Color' : 'Dark';
-  }
+	},
+	updateButtonText: function () {
+		var darkModeBtn = $('.dark-mode-btn');
+		var isLightMode = $('body').hasClass('light-mode');
+		darkModeBtn.text(isLightMode ? 'Color' : 'Dark');
+	}
 };
-// darkMode 객체 초기화
-document.addEventListener('DOMContentLoaded', function() {
-  darkMode.init();
-});
+// darkMode
+
+var chartJs = {
+	init: function () {
+		this.barChart();
+		this.lineChart();
+		//this.pieChart();
+		this.doughnutChart();
+		this.doughnutChartHalf();
+		
+	},
+	barChart: function () {
+		const ctx = document.getElementById('barChart').getContext('2d');
+		const barChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+				datasets: [{
+					label: 'Bar 차트',
+					data: [12, 19, 3, 5, 2, 3],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)'
+					],
+					borderColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					y: {
+						beginAtZero: false
+					}
+				},
+				/* responsive: false,
+        maintainAspectRatio: false, */
+			}
+		});
+	},
+
+	lineChart: function () {
+		const ctx = document.getElementById('lineChart').getContext('2d');
+		const data = {
+			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+			datasets: [{
+				label: 'Line 차트',
+				data: [65, 59, 80, 81, 56, 55, 40],
+				fill: false,
+				borderColor: 'rgb(75, 192, 192)',
+				tension: 0.1
+			}]
+		};
+		const options = {
+			scales: {
+				y: {
+					beginAtZero: false
+				}
+			},
+			/* responsive: false,
+      maintainAspectRatio: false, */
+		};
+		const lineChart = new Chart(ctx, {
+			type: 'line',
+			data: data,
+			options: options
+		});
+	},
+
+	doughnutChart: function () {
+		const ctx = document.getElementById('doughnutChart').getContext('2d');
+		const data = {
+			labels: [
+				'Red',
+				'Blue',
+				'Yellow'
+			],
+			datasets: [{
+				label: '도너츠 차트',
+				data: [300, 50, 100],
+				backgroundColor: [
+					'rgb(148, 220, 255)',
+					'rgb(247, 93, 95)',
+					'rgb(11, 112, 244)'
+				],
+				hoverOffset: 4
+			}]
+		};
+		const options = {
+			/* responsive: false,
+      maintainAspectRatio: false, */
+			
+			Plugins : {
+				tooltip: {
+					enabled: false
+				},
+				datalabels: { 
+					formatter: function (value, context) {
+						var idx = context.dataIndex; 
+						return context.chart.data.labels[idx] + value + '%';
+					},
+					align: 'top',
+					font: { 
+						weight: 'bold',
+            size: '15',
+          },
+					color: 'red',
+				},
+			}
+		};
+		const doughnutChart = new Chart(ctx, {
+			plugins: [ChartDataLabels],
+			options: options,
+			type: 'doughnut',
+			data: data,
+		});
+	},
+
+	doughnutChartHalf: function () {
+		const ctx = document.getElementById('doughnutChartHalf').getContext('2d');
+		const data = {
+			labels: [
+				'Red',
+				'Blue',
+				'Yellow'
+			],
+			datasets: [{
+				label: '도너츠 차트',
+				data: [300, 50, 100],
+				backgroundColor: [
+					'rgb(148, 220, 255)',
+					'rgb(247, 93, 95)',
+					'rgb(11, 112, 244)'
+				],
+				hoverOffset: 4
+			}]
+		};
+		const options = {
+			/* responsive: false,
+      maintainAspectRatio: false, */
+			rotation: -90,
+      circumference: 180,
+			cutout: '50%',
+			Plugins : {
+				tooltip: {
+					enabled: false
+				},
+				datalabels: { 
+					formatter: function (value, context) {
+						var idx = context.dataIndex; 
+						return context.chart.data.labels[idx] + value + '%';
+					},
+					align: 'top',
+					font: { 
+						weight: 'bold',
+            size: '15',
+          },
+					color: 'red',
+				},
+			}
+		};
+		const doughnutChartHalf = new Chart(ctx, {
+			plugins: [ChartDataLabels],
+			options: options,
+			type: 'doughnut',
+			data: data,
+		});
+	},
+}
+// chartJs
+
 
 $(document).ready(function () {
 	gCom.init();
 	gUI.init();
+	darkMode.init();
+	chartJs.init();
 })

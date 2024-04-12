@@ -388,15 +388,13 @@ button::-moz-focus-inner {
   color: #fff;
 }
 
-
-
 /* @Jumbotron */
 .jumbotron {
   width: 100%;
 }
 
 .jumbotron .jumbo-tit {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 700;
 }
 
@@ -404,4 +402,10 @@ button::-moz-focus-inner {
   font-size: 20px;
   font-weight: 300;
   word-break: keep-all;
+}
+
+@media only screen and (max-width: 1023px) {
+  .jumbotron .jumbo-tit {
+    font-size: 3rem;
+  }
 }

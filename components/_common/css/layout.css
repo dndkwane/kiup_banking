@@ -234,7 +234,9 @@
   border-width: 1px 1px 0 0;
   transform: rotate(45deg) translate(0, -50%);
 }
-
+.dark-mode .g-snb .g-depth2 .g-node2.is-current > a:after {
+  border-color: var(--white-color);
+}
 .g-snb .g-depth2 .g-node2.is-current > a:after {
   content: '';
   border-color: #222;

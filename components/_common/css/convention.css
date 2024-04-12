@@ -53,8 +53,7 @@
 .g-tbl.__basic table td {padding: .8rem 1.5rem;font-weight: normal;}
 
 .g-tbl.__basic table td,
-.g-tbl.__basic table th {font-size: 1.4rem;}
-
+.g-tbl.__basic table th {font-size: 1.4rem;line-height:1.2;}
 .g-browser-icons.__pc .img img{width: 10rem;height: auto;}
 
 caption {height:0;font-size: 0;}

@@ -9,25 +9,36 @@
 </head>
 
 <body>
-  <div id="wrapper">
-
+  <div id="wrapper" class="fixed">
     <!-- Header -->
-    <header id="header">
-      <h1>로고 테스트 1234 </h1>
-    </header>
+    <div class="header_include"></div>
     <!-- // Header -->
-
+    <!-- navbar -->
+    <div class="navbar_include"></div>
+    <!-- // navbar -->
+    <!-- // sidebar -->
+    <div class="sidebar_include"></div>
+    <!-- // sidebar -->
     <!-- Container -->
-    <main role="main" class="container">
-      <div id="content" class="content"></div>
-    </main>
+    <div role="main" id="container">
+      <div id="content" class="content">
+        <canvas id="myChart" width="100" height="100"></canvas>
+      </div>
+    </div>
     <!-- // Container -->
 
-    <!-- Footer -->
-    <footer class="footer"></footer>
-    <!-- // Footer -->
+    <!-- fixed-menu -->
+    <div class="footer_include"></div>
+    <!-- // fixed-menu -->
   </div>
-  
-</body>
+  <script>
+    // include
+    $('.header_include').load('layout/main_header.html'); //header
+    $('.navbar_include').load('layout/navbar.html'); //navbar
+    $('.sidebar_include').load('layout/sidebar.html'); //sidebar
+    $('.footer_include').load('layout/footer_menu.html'); //fixed menu
 
+    
+  </script>
+</body>
 </html>
