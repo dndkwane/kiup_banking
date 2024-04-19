@@ -182,6 +182,7 @@
 
 /* SNB */
 .g-snb {
+  /* background-color: #fffef8; */
   padding-top: 0px;
 }
 
@@ -602,6 +603,7 @@
   border-top: 0;
 }
 
-.dark-mode .__basic th {
+.dark-mode .__basic th,
+.dark-mode .tbl-view th {
   color: var(--bg-color);
 }

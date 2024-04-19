@@ -77,6 +77,7 @@ section {
 body {
   font-family: "Pretendard", "sans-serif", "Apple SD Gothic Neo", "AppleGothic", "Apple Gothic", "-apple-system", sans-serif;
   /* 1.6 * 10px = 16px */
+  /* background-color: #faf8ff; */
   font-size: 1.6rem;
   color: #000;
   line-height: 1;

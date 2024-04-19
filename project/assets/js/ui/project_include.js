@@ -50,4 +50,10 @@ var include = {
 		document.write('	<a href="#g-wrapper" class="g-top" data-role="spy-scroll">TOP</a>');
 		document.write('	<div class="g-mask"></div>');
 	},
+	includeHtml : function () {
+		$('.header_include').load('layout/main_header.html'); //header
+		$('.navbar_include').load('layout/navbar.html'); //navbar
+		$('.sidebar_include').load('layout/sidebar.html'); //sidebar
+		$('.footer_include').load('layout/footer_menu.html'); //fixed menu
+	}
 }
