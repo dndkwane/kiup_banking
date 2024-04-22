@@ -1343,40 +1343,35 @@ var ui = {
 				changeYear: true,
 				changeMonth: true,
 				showOn: 'both',
-				buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
+				buttonImage: ('../../../components/_common/img/button/btn_calendar.png'),
 				buttonImageOnly: true,
 				showAnim: '',
 				onSelect: function () {
-					dimDisplay('none'); //hide back layer when date selected
+					dimDisplay('none');
 				}
 			});
 
-			$('#datepicker').datepicker('setDate', 'today'); // set date as today
+			$('#datepicker').datepicker('setDate', 'today');
 
-			// custom datepicker 
 			const dateInput = document.querySelector('.input__item'),
 				dateIcon = document.querySelector('.ui-datepicker-trigger'),
 				calendar = document.querySelector('#ui-datepicker-div');
 
-			// add back layer
 			const dim = document.createElement('div');
 			dim.classList.add('datepicker-layer');
 			calendar.before(dim);
 
-			// back layer show
 			dateInput.addEventListener('focus', function () {
 				if (calendar.style.display === 'block') {
 					dimDisplay('block');
 				}
 			})
-
 			dateIcon.addEventListener('click', function () {
 				if (calendar.style.display == 'block') {
 					dimDisplay('block');
 				}
 			})
 
-			//back layer hide
 			const layer = document.querySelector('.datepicker-layer');
 
 			window.addEventListener('click', function (e) {
@@ -1384,8 +1379,6 @@ var ui = {
 					dimDisplay('none');
 				}
 			});
-
-			// back layer display control
 			function dimDisplay(display) {
 				layer.style.display = display;
 			}
