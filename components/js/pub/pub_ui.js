@@ -1372,15 +1372,15 @@ var ui = {
 				}
 			})
 
-			const layer = document.querySelector('.datepicker-layer');
+			const layerDateLayer = document.querySelector('.datepicker-layer');
 
 			window.addEventListener('click', function (e) {
-				if (e.target === layer) {
+				if (e.target === layerDateLayer) {
 					dimDisplay('none');
 				}
 			});
 			function dimDisplay(display) {
-				layer.style.display = display;
+				layerDateLayer.style.display = display;
 			}
 		},
 	}

@@ -7,7 +7,7 @@ var gBaseURL = {
 }
 var _root = '../';
 var gComponents = {
-	root : '../../components/'
+	root : '/components/'
 }
 
 var include = {
@@ -15,10 +15,10 @@ var include = {
 		document.write('<title>kiup_banking - 퍼블리싱</title>');
 		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />');
-		document.write('<link rel="shortcut icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
-		document.write('<link rel="icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
+		/* document.write('<link rel="shortcut icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
+		document.write('<link rel="icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />'); */
 	},
-	head : function(){		
+	head : function(){
 		document.write('<link href="'+gRootURL.root+'assets/css/common.css" rel="stylesheet" />');
 		document.write('<link href="'+gRootURL.root+'assets/css/reset.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'assets/js/libs/jquery.min.js"></script>');
@@ -51,9 +51,9 @@ var include = {
 		document.write('	<div class="g-mask"></div>');
 	},
 	includeHtml : function () {
-		$('.header_include').load('layout/main_header.html'); //header
-		$('.navbar_include').load('layout/navbar.html'); //navbar
-		$('.sidebar_include').load('layout/sidebar.html'); //sidebar
-		$('.footer_include').load('layout/footer_menu.html'); //fixed menu
+		$('.header_include').load('/project/html/layout/main_header.html'); //header
+		$('.navbar_include').load('/project/html/layout/navbar.html'); //navbar
+		$('.sidebar_include').load('/project/html/layout/sidebar.html'); //sidebar
+		$('.footer_include').load('/project/html/layout/footer_menu.html'); //fixed menu
 	}
 }

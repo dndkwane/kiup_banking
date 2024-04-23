@@ -172,10 +172,6 @@ var gUI = {
 			//ut.setScriptLoader(gRootURL.root+'_wsg/common/js/addon/jquery.clipboard.min.js', 'clipboardScript');
 			//this.copyed.init();
 		}
-
-
-
-
 	},
 	winEvent: function () {
 		var setTime = null;

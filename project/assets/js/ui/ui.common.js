@@ -633,16 +633,16 @@ var gCom = {
 			//펼치기
 			$('body').addClass('is-aside-closed');
 			$(this.anbBtnEl).not('.is-clickEvent').on('click', function (e) {
-				if (!$('body').hasClass('is-aside-closed')) {
-					$('body').removeClass('is-aside-opened');
-					$('body').addClass('is-aside-closed');
-					$(this).removeClass('active');
+				var body = $('body');
+				if (!body.hasClass('is-aside-closed')) {
+						body.removeClass('is-aside-opened').addClass('is-aside-closed');
+						$(this).removeClass('active');
 				} else {
-					$('body').addClass('is-aside-opened');
-					$('body').removeClass('is-aside-closed');
-					$(this).addClass('active');
+						body.addClass('is-aside-opened').removeClass('is-aside-closed');
+						$(this).addClass('active');
 				}
-			}).addClass('is-clickEvent');
+		}).addClass('is-clickEvent');
+		
 
 			//숨기기
 			$(this.maskEl).not('.is-clickEvent').on('click', function (e) {
@@ -670,14 +670,15 @@ function set_init(){
 	/* setDeviceInit(); // 디바이스 설정 */
 	setStatusInit(); // 상태 설정
 }
+
 /* UI */
 function ui_init(){
 	/* Layout */
+	gCom.init();
 	asideInit(); // 사이드메뉴
 	latestMenu(); // 사이드메뉴 최근이용메뉴
 
 	/* Components */
-	datepickerInit(); // Datepicker
 	selectInit(); // Selected
 	tabInit(); // Tab
 	dropInit(); // Dropmenu
@@ -693,7 +694,3 @@ $(function(){
 	set_init();
 	ui_init();
 });
-
-$(document).ready(function () {
-	gCom.init();
-})
