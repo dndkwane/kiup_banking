@@ -182,6 +182,7 @@ var setScroll = {
 var dimmer = {
 	eleModule: '.dimmer',
 	lens: 0,
+
 	open: function ($module, selector, callback) {
 		var _this = this;
 		_this.lens = _this.lens + 1;

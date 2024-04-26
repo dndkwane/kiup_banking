@@ -22,7 +22,131 @@
     <!-- Container -->
     <div role="main" id="container">
       <div id="content" class="content">
-        123
+        <div class="main-quick-btn">
+          <ul>
+            <li>
+              <a href="#this">
+                <span>대출상품</span>
+              </a>
+            </li>
+            <li>
+              <a href="#this">
+                <span>자금모으기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#this">
+                <span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-status-graph">
+          <div class="top">
+            <h1>매입/매출 현황</h1>
+            <span>기준일 2024.02</span>
+          </div>
+          <div class="graph_container">
+            <div class="chartjs-area HbarChart">
+              <div class="bar-chart">
+                <canvas id="HbarChart" style="width: 100%;" height="100"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-account-box">
+          <div class="account-wrap">
+            <div class="swiper-main-wrap">
+              <!-- Swiper -->
+              <div class="swiper paginationSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="name">
+                      <dl>
+                        <dt>보통예금</dt>
+                        <dd>052-106901-01-017</dd>
+                      </dl>
+                    </div>
+                    <div class="amount">
+                      <dl>
+                        <dt>이체가능금액</dt>
+                        <dd>
+                          <span class="nums" data-count="10000000">0</span><span id="num-unit"></span>
+                          <span>원</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="name __kb">
+                      <dl>
+                        <dt>KB Star 정기예금</dt>
+                        <dd>101-345301-80-147</dd>
+                      </dl>
+                    </div>
+                    <div class="amount __kb">
+                      <dl>
+                        <dt>이체가능금액</dt>
+                        <dd>
+                          <span class="nums" data-count="20000000">0</span><span id="num-unit"></span>
+                          <span>원</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-slide">
+                      <div class="name __shinhan">
+                        <dl>
+                          <dt>KB Star 정기예금</dt>
+                          <dd>101-345301-80-147</dd>
+                        </dl>
+                      </div>
+                      <div class="amount __shinhan">
+                        <dl>
+                          <dt>이체가능금액</dt>
+                          <dd>
+                            <span class="nums" data-count="30000000">0</span><span id="num-unit"></span>
+                            <span>원</span>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="form-controls flexible">
+              <span class="form-input-group type-search">
+                <form action="">
+                  <input type="text" name="sumInput" id="sumInput" value="" placeholder="보내는 금액 입력" class="form-input">
+                </form>
+              </span>
+            </div>
+            <div class="account-num">
+              <div class="form">
+                <div class="form-controls flexible type-email2">
+                  <select name="sEmail2" id="sEmail4" title="이메일 서비스 도메인" class="form-select">
+                    <option value="">IBK기업은행</option>
+                    <option value="">KB국민은행</option>
+                    <option value="">신한은행</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-controls flexible">
+                <span class="form-input-group type-search">
+                  <input type="text" name="acnum" id="acnum" value="" placeholder="계좌번호입력" class="form-input">
+                </span>
+              </div>
+              <div class="btn-wrap flex-wrap btn-ov">
+                <button type="button" class="btn __gray _line round-8">본인계좌</button>
+                <button type="button" class="btn __gray _line round-8">최근입금계좌</button>
+                <button type="button" class="btn __gray _line round-8">자주쓰는계좌</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- // Container -->
@@ -32,5 +156,100 @@
     <!-- // fixed-menu -->
   </div>
   <script>include.includeHtml()</script>
+  <script>
+    var ui = {
+      init: function () {
+        if ($('.chartjs-area').length) { this.chartJs.init(); } // ChartJs
+        if ($('.swiper-main-wrap').length) { this.swiperJs.init(); } // Swiper,
+      },
+      chartJs: {
+        init: function () {
+          this.barChart();
+        },
+        barChart: function () {
+          const ctx = document.getElementById('HbarChart').getContext('2d');
+          const options = {
+            layout: {
+              padding: 0
+            },
+            plugins: {
+              legend: {
+                display: false,
+                labels: {
+                  font: {
+                    size: 20
+                  },
+                },
+              },
+            },
+            indexAxis: 'y',
+            scales: {
+              x: {
+                beginAtZero: true,
+                scaleLineColor: 'red',
+                grid: {
+                  color: 'transparent',
+                  drawBorder: false,
+                },
+                display: false,
+              },
+              y: {
+                beginAtZero: true,
+                grid: {
+                  color: 'transparent',
+                  drawBorder: false,
+                },
+              }
+            },
+          };
+          const data = {
+            labels: ['매출', '매입'],
+            datasets: [{
+              data: [100000000, 80000000],
+              backgroundColor: [
+                'rgba(0, 122, 255, 1)',
+                'rgba(250, 110, 51, 1)',
+              ],
+              borderRadius: 5,
+              datalabels: {
+                //textAlign: 'left',
+                align: '',
+                anchor: 'start',
+                labels: {
+                  value: {
+                    color: 'white',
+                  },
+                },
+                formatter: function (value, context){
+                  let result = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                  return result + '원'
+                },
+              }
+            }],
+          };
+          const barchart = new Chart(ctx, {
+            plugins: [ChartDataLabels],
+            options: options,
+            type: 'bar',
+            data: data,
+          });
+        },
+      },
+      // chartJs
+      swiperJs: {
+        init: function () {
+          this.paginationSwiper();
+        },
+        paginationSwiper: function () {
+          let swiperPagination = new Swiper(".paginationSwiper", {
+            pagination: {
+              el: ".paginationSwiper .swiper-pagination",
+            }
+          })
+        },
+      },
+    }
+  </script>
 </body>
+
 </html>

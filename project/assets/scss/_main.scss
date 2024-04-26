@@ -1,0 +1,251 @@
+.content {
+  .main-quick-btn {
+    padding: 2rem;
+    ul {
+      @include flex (row,center,center);
+      gap: .6rem;
+     
+      a span {
+        min-height: 4.8rem;
+        background-color: white;
+        @include flex (row,center,center);
+        border-radius: 1.2rem;
+        font-weight: nth($font-weight,7);
+        font-size: map-get($font-size,h5);
+        gap: .6rem;
+      }
+      li {
+        a span:before {
+          content: '';
+          display: inline-block;
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+      li:nth-child(1) {
+        @include flex-item(3);
+        a span:before {
+          @include image-style("../img/icon/ico_loan_product.svg", 1.8rem auto, no-repeat, center, center );
+        }
+      }
+      li:nth-child(2) {
+        @include flex-item(3);
+        a span:before {
+          @include image-style("../img/icon/ico_raise_money.svg", 1.8rem auto, no-repeat, center, center );
+        }
+      }
+      li:nth-child(3) {
+        @include flex-item(2);
+        a span:before {
+          @include image-style("../img/icon/ico_plus.svg", 1.5rem auto, no-repeat, center, center );
+        }
+      }
+    }
+  }
+  .main-status-graph {
+    padding: 0 2rem .5rem;
+    .top {
+      @include flex();
+      h1 {
+        font-size: map-get($font-size,h3);
+        font-weight: nth($font-weight,7);
+      }
+      span {
+        font-size: map-get($font-size,h8);
+        font-weight: nth($font-weight,3);
+      }
+    }
+  }
+  .chartjs-area.HbarChart {
+    width: 100%;
+    max-width: 100%;
+  }
+  .main-account-box {
+    /* display: flex;
+    align-items: stretch;
+    flex-direction: column; */
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+    border-radius: 2.4rem 2.4rem 0 0;
+    .account-wrap {
+      padding: 2rem;
+      .swiper-main-wrap {
+        position: relative;
+        .paginationSwiper {
+          position: inherit;
+          padding-bottom: 3rem;
+          .swiper-wrapper {
+            border-radius: 1.4rem;
+            background: linear-gradient(180deg, #004C9D 0%, #004084 100%);
+            .swiper-slide {
+              @include flex(column,center,stretch);
+              height: 15.2rem;
+              dl {
+                padding: 2.4rem 2rem;
+                dt,
+                dd {
+                  color: white;
+                }
+              }
+              .amount {
+                &.__kb,
+                &.__shinhan {
+                  dl {
+                    dt,
+                    dd {
+                      color: #222;
+                    }
+                  }
+                }
+              }
+              .name {
+                &.__shinhan {
+                  dl:before {                   
+                    @include image-style("../img/common/logo_shinhan.png", 3.2rem auto, no-repeat, center, center);
+                  }
+                  dl {
+                    dt,
+                    dd {
+                      color: #222;
+                    }
+                  }
+                }
+                &.__kb {
+                  dl:before {                   
+                    @include image-style("../img/common/logo_kb.png", 3.2rem auto, no-repeat, center, center);
+                  }
+                  dl {
+                    dt,
+                    dd {
+                      color: #222;
+                    }
+                  }
+                }
+                dl:before {
+                  content: '';
+                  position: absolute;
+                  left: 2rem;
+                  display: inline-block;
+                  width: 3.2rem;
+                  height: 3.2rem;
+                  @include image-style("../img/common/logo_ibk.png", 3.2rem auto, no-repeat, center, center);
+                }
+                dl {
+                  padding-left: 6rem;
+                  dt {
+                    font-weight: nth($font-weight,5);
+                  }
+                  dd {
+                    padding-top: .4rem;
+                    font-weight: nth($font-weight,3);
+                    font-size: map-get($font-size,h6);
+                  }
+                }
+              }
+              .amount {
+                dl {
+                  padding-top: 0;
+                  text-align: right;
+                  dt {
+                    font-weight: nth($font-weight,3);
+                    font-size: map-get($font-size,h6);
+                  }
+                  dd {
+                    font-weight: nth($font-weight,7);
+                    font-size: map-get($font-size,h2);
+                    padding-top: .4rem;
+                    span.nums {
+                      font-weight: nth($font-weight,7);
+                    }
+                    span {
+                      font-weight: nth($font-weight,3);
+                    }
+                  }
+                }
+              }
+            }
+          }          
+        }
+        .swiper-pagination-bullet {
+          height: .6rem;
+          border-radius: .3rem;
+        }
+        .swiper-pagination-bullet-active {
+          width: 1.6rem;
+          background:#004C9D;
+        }
+      }
+      .form-controls {
+        width: inherit;
+        input.form-input {
+          font-size: map-get($font-size,h3);
+          padding-right: 0;
+          border: none;
+          border-bottom: .2rem solid #bbb;
+          border-radius: 0;
+          text-align: right;
+          box-shadow: none;
+          font-weight: nth($font-weight,7);
+        }
+        input:focus::-webkit-input-placeholder {
+          opacity: 0;
+        }
+        input:focus::-moz-placeholder {
+          opacity: 0;
+        }
+        input::-webkit-input-placeholder {
+          opacity: 1;
+          color: #C6CBCF;
+        }
+        input::-moz-placeholder {
+          opacity: 1;
+          color: #C6CBCF;
+        }
+        input.form-input:focus {
+          border-bottom: .2rem solid #004C9D;
+        }
+      }
+      .account-num {
+        margin-top: 2rem;
+        padding: 2rem;
+        box-shadow: 0px 4px 10px 0px #0000001A;
+        border: 1px solid #E8E8E8;
+        input.form-input {
+          padding-left: 0;
+          border-bottom: 1px solid #bbb;
+          text-align: nth($text-align,2);
+          font-weight: nth($font-weight,5);
+        }
+        .btn-wrap {
+          margin-top: 1.2rem;
+        }
+        button.btn {
+          padding: .5rem 0;
+          border-radius: .2rem;
+          font-size: map-get($font-size,h7);
+        }
+        button+button {
+          margin-left: .5rem;
+        }        
+        .btn:hover,
+        .btn:focus {
+          border-color: #eee;
+          background-color: #eee;
+          color: inherit;
+          font-weight: 500;
+        }
+        .form-select {
+          padding-left: 0;
+          border:0;
+          border-bottom: .1rem solid #bbb;
+          border-radius: 0;
+          box-shadow: none;
+          background-position: right center;
+          font-size: map-get($font-size,h3);
+          font-weight: nth($font-weight,5);
+        }
+      }
+    } // .account-wrap
+  }
+}

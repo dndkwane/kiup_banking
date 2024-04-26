@@ -21,6 +21,7 @@ var include = {
 	head : function(){
 		document.write('<link href="'+gRootURL.root+'assets/css/common.css" rel="stylesheet" />');
 		document.write('<link href="'+gRootURL.root+'assets/css/reset.css" rel="stylesheet" />');
+		document.write('<link href="'+gComponents.root+'css/swiper-bundle.min.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'assets/js/libs/jquery.min.js"></script>');
 		document.write('<script src="'+gRootURL.root+'assets/js/ui/ui.common.js"></script>');
 		document.write('<script src="'+gComponents.root+'js/pub/pub_ui.js"></script>');
@@ -28,6 +29,7 @@ var include = {
 		document.write('<script src="'+gComponents.root+'js/pub/pub_device.js"></script>');
 		document.write('<script src="'+gComponents.root+'js/libs/swiper-bundle.min.js"></script>');
 		document.write('<script src="'+gComponents.root+'js/libs/chart.min.js"></script>');
+		document.write('<script src="'+gComponents.root+'js/libs/chartjs-plugin-datalabels.js"></script>');
 		document.write('<script src="'+gComponents.root+'js/libs/moment.js"></script>');
 	},
 	quick : {
@@ -52,6 +54,7 @@ var include = {
 	},
 	includeHtml : function () {
 		$('.header_include').load('/project/html/layout/main_header.html'); //header
+		$('.sub__header_include').load('/project/html/layout/sub_header.html'); //header
 		$('.navbar_include').load('/project/html/layout/navbar.html'); //navbar
 		$('.sidebar_include').load('/project/html/layout/sidebar.html'); //sidebar
 		$('.footer_include').load('/project/html/layout/footer_menu.html'); //fixed menu

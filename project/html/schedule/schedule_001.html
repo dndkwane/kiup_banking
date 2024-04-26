@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="../../assets/js/ui/project_include.js"></script>
+  <script>include.meta()</script>
+  <script>include.head()</script>
+</head>
+
+<body>
+  <div id="wrapper" class="fixed">
+    <!-- Header -->
+    <div class="sub__header_include"></div>
+    <!-- // Header -->
+    <!-- navbar -->
+    <div class="navbar_include"></div>
+    <!-- // navbar -->
+    <!-- // sidebar -->
+    <div class="sidebar_include"></div>
+    <!-- // sidebar -->
+    <!-- Container -->
+    <div role="main" id="container">
+      <div id="content" class="content">
+        123
+      </div>
+    </div>
+    <!-- // Container -->
+
+    <!-- fixed-menu -->
+    <div class="footer_include"></div>
+    <!-- // fixed-menu -->
+  </div>
+  <script>include.includeHtml()</script>
+  <script>
+    var ui = {
+      init: function () {
+        if ($('.chartjs-area').length) { this.chartJs.init(); } // ChartJs
+        if ($('.swiper-main-wrap').length) { this.swiperJs.init(); } // Swiper,
+      },
+      chartJs: {
+        init: function () {
+          this.barChart();
+        },
+        barChart: function () {
+          const ctx = document.getElementById('HbarChart').getContext('2d');
+          const options = {
+            layout: {
+              padding: 0
+            },
+            plugins: {
+              legend: {
+                display: false,
+                labels: {
+                  font: {
+                    size: 20
+                  },
+                },
+              },
+            },
+            indexAxis: 'y',
+            scales: {
+              x: {
+                beginAtZero: true,
+                scaleLineColor: 'red',
+                grid: {
+                  color: 'transparent',
+                  drawBorder: false,
+                },
+                display: false,
+              },
+              y: {
+                beginAtZero: true,
+                grid: {
+                  color: 'transparent',
+                  drawBorder: false,
+                },
+              }
+            },
+          };
+          const data = {
+            labels: ['매출', '매입'],
+            datasets: [{
+              data: [100000000, 80000000],
+              backgroundColor: [
+                'rgba(0, 122, 255, 1)',
+                'rgba(250, 110, 51, 1)',
+              ],
+              borderRadius: 5,
+              datalabels: {
+                //textAlign: 'left',
+                align: '',
+                anchor: 'start',
+                labels: {
+                  value: {
+                    color: 'white',
+                  },
+                },
+                formatter: function (value, context){
+                  let result = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                  return result + '원'
+                },
+              }
+            }],
+          };
+          const barchart = new Chart(ctx, {
+            plugins: [ChartDataLabels],
+            options: options,
+            type: 'bar',
+            data: data,
+          });
+        },
+      },
+      // chartJs
+      swiperJs: {
+        init: function () {
+          this.paginationSwiper();
+        },
+        paginationSwiper: function () {
+          let swiperPagination = new Swiper(".paginationSwiper", {
+            pagination: {
+              el: ".paginationSwiper .swiper-pagination",
+            }
+          })
+        },
+      },
+    }
+  </script>
+</body>
+
+</html>

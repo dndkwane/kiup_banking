@@ -163,11 +163,11 @@ html {
   &.btn-chk {
     button {
       text-align: left;
-      @include image-style("../_common/img/icon/checkbox_off.svg", 3rem auto, no-repeat, calc(100% - 1.2rem), center);
+      @include image-style("/components/_common/img/icon/checkbox_off.svg", 3rem auto, no-repeat, calc(100% - 1.2rem), center);
 
       &:hover,
       &:focus {
-        @include image-style("../_common/img/icon/checkbox_on.svg", 3rem auto, no-repeat, calc(100% - 1.2rem), center);
+        @include image-style("/components/_common/img/icon/checkbox_on.svg", 3rem auto, no-repeat, calc(100% - 1.2rem), center);
         border-color: $main-blue;
         color: $main-blue;
         font-weight: 500;
@@ -185,7 +185,7 @@ html {
     line-height: 22px;
     transition: all .3s;
     padding-right: 45px;
-    @include image-style("../_common/img/icon/caret_down.png", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
+    @include image-style("/components/_common/img/icon/caret_down.png", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
   }
  */
   button::-moz-focus-inner {
@@ -561,14 +561,13 @@ html {
 .icon-del {
   width: 2.4rem;
   height: 2.4rem;
-  @include image-style("../_common/img/icon/ico_del.svg", 2rem auto, no-repeat);
+  @include image-style("/components/_common/img/icon/ico_del.svg", 2rem auto, no-repeat);
 }
 
 .icon-search {
   width: 2.4rem;
   height: 2.4rem;
-  @include image-style("../_common/img/icon/ico_search.svg", 1.8rem auto, no-repeat);
-
+  @include image-style("/components/_common/img/icon/ico_search.svg", 1.8rem auto, no-repeat);
 }
 
 .dark-mode .icon-search {
@@ -615,7 +614,7 @@ html {
 .arw-breadcrumb {
   width: 2rem;
   height: 2rem;
-  @include image-style("../_common/img/icon/arr_right.svg", 2rem auto, no-repeat, left, center);
+  @include image-style("/components/_common/img/icon/arr_right.svg", 2rem auto, no-repeat, left, center);
 }
 
 .dark-mode .arw-breadcrumb {
@@ -656,7 +655,7 @@ html {
     & .has-arrow::after {
       width: 2rem;
       height: 2rem;
-      @include image-style("../_common/img/icon/arr_right.svg", 2rem auto, no-repeat);
+      @include image-style("/components/_common/img/icon/arr_right.svg", 2rem auto, no-repeat);
     }
   }
 
@@ -1110,7 +1109,7 @@ html {
 .arw-toggle {
   width: 2.5rem;
   height: 2.5rem;
-  @include image-style("../_common/img/icon/arr_right.svg", 100% auto, no-repeat, center, center);
+  @include image-style("/components/_common/img/icon/arr_right.svg", 100% auto, no-repeat, center, center);
   cursor: pointer;
 }
 
@@ -1581,12 +1580,12 @@ html {
     .__board-prev {
       width: 8px;
       transform: rotate(180deg);
-      @include image-style("../_common/img/icon/arr_right.svg", 2rem auto, no-repeat, center, center);
+      @include image-style("/components/_common/img/icon/arr_right.svg", 2rem auto, no-repeat, center, center);
     }
 
     .__board-next {
       width: 8px;
-      @include image-style("../_common/img/icon/arr_right.svg", 2rem auto, no-repeat, center, center);
+      @include image-style("/components/_common/img/icon/arr_right.svg", 2rem auto, no-repeat, center, center);
     }
   }
 }
@@ -2599,7 +2598,7 @@ button.fold-toggle {
   &.__close {
     width: 1.5rem;
     height: 1.5rem;
-    @include image-style("../_common/img/button/btn_close.svg", 1.5rem auto, no-repeat);
+    @include image-style("/components/_common/img/button/btn_close.svg", 1.5rem auto, no-repeat);
   }
 }
 
@@ -3790,7 +3789,7 @@ img.img-cover {
   width: 26px;
   top: 50%;
   transform: translateY(-50%);  
-  background: url("../_common/img/icon/arr_right.svg") no-repeat center;
+  background: url("/components/_common/img/icon/arr_right.svg") no-repeat center;
   background-size: 2.4rem;
  
 }

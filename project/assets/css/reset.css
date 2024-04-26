@@ -9,7 +9,7 @@ html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead
 canvas, details, figure, figcaption, main, footer, header, menu, nav, section,
 button, select, textarea, input, form, fieldset, legend, label, a, span, strong, em, address, pre, code, dfn, small, i, b {margin:0; padding:0; border:0; list-style:none; line-height: inherit; font-family:'Pretendard', 'sans-serif'; font-style:normal; font-weight:inherit; color:inherit; box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit; /* -webkit-print-color-adjust:exact; */}
 main, article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section {display:block;}
-body {font-family:'Pretendard', 'sans-serif'; font-size:14px; word-break:normal; word-wrap:break-word; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+body {overflow-y:auto;font-family:'Pretendard', 'sans-serif'; font-size:14px; word-break:normal; word-wrap:break-word; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
 [hidden] {display:none;}
 button {background-color:transparent; cursor:pointer;}
 fieldset, iframe {width:100%;}

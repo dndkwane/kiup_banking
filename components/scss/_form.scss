@@ -103,7 +103,7 @@ textarea.form-input {
   transition: all .3s;
   padding-right: 45px;
   font-size: 1.4rem;
-  @include image-style("../_common/img/icon/caret_down.svg", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
+  @include image-style("/components/_common/img/icon/caret_down.svg", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
 
   &:hover {
     border-color: #222
@@ -179,15 +179,15 @@ textarea.form-input {
       background-color: inherit;
     }
     &>input:checked+label:before {
-      @include image-style("../_common/img/icon/ico_radio_on.svg", 100% auto, no-repeat, center, center );
+      @include image-style("/components/_common/img/icon/ico_radio_on.svg", 100% auto, no-repeat, center, center );
       border: none;
     }
     &>input[disabled]+label:before {
-      @include image-style("../_common/img/icon/ico_radio_disable.svg", 100% auto, no-repeat, center, center );
+      @include image-style("/components/_common/img/icon/ico_radio_disable.svg", 100% auto, no-repeat, center, center );
       border: none;
     }
     & label:before {
-      @include image-style("../_common/img/icon/ico_radio_off.svg", 100% auto, no-repeat, center, center );
+      @include image-style("/components/_common/img/icon/ico_radio_off.svg", 100% auto, no-repeat, center, center );
       border: none;
     }
     &>input:hover+label:before,
@@ -804,7 +804,7 @@ span.form-text {
   position: absolute;
   width: 2.4rem;
   height: 2.4rem;
-  @include image-style("../_common/img/icon/ico_del.svg", 2rem auto, no-repeat);
+  @include image-style("/components/_common/img/icon/ico_del.svg", 2rem auto, no-repeat);
   z-index:1;  
   cursor: pointer;
   transition: 0.2s;

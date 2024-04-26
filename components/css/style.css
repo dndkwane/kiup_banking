@@ -167,7 +167,7 @@ html {
      line-height: 22px;
      transition: all .3s;
      padding-right: 45px;
-     @include image-style("../_common/img/icon/caret_down.png", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
+     @include image-style("/components/_common/img/icon/caret_down.png", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
    }
   */
 }
@@ -190,13 +190,13 @@ html {
 }
 .btn-wrap.btn-chk button {
   text-align: left;
-  background-image: url("../_common/img/icon/checkbox_off.svg");
+  background-image: url("/components/_common/img/icon/checkbox_off.svg");
   background-size: 3rem auto;
   background-repeat: no-repeat;
   background-position: calc(100% - 1.2rem), center;
 }
 .btn-wrap.btn-chk button:hover, .btn-wrap.btn-chk button:focus {
-  background-image: url("../_common/img/icon/checkbox_on.svg");
+  background-image: url("/components/_common/img/icon/checkbox_on.svg");
   background-size: 3rem auto;
   background-repeat: no-repeat;
   background-position: calc(100% - 1.2rem), center;
@@ -547,7 +547,7 @@ html {
 .icon-del {
   width: 2.4rem;
   height: 2.4rem;
-  background-image: url("../_common/img/icon/ico_del.svg");
+  background-image: url("/components/_common/img/icon/ico_del.svg");
   background-size: 2rem auto;
   background-repeat: no-repeat;
   background-position: 50%, 50%;
@@ -556,7 +556,7 @@ html {
 .icon-search {
   width: 2.4rem;
   height: 2.4rem;
-  background-image: url("../_common/img/icon/ico_search.svg");
+  background-image: url("/components/_common/img/icon/ico_search.svg");
   background-size: 1.8rem auto;
   background-repeat: no-repeat;
   background-position: 50%, 50%;
@@ -605,7 +605,7 @@ html {
 .arw-breadcrumb {
   width: 2rem;
   height: 2rem;
-  background-image: url("../_common/img/icon/arr_right.svg");
+  background-image: url("/components/_common/img/icon/arr_right.svg");
   background-size: 2rem auto;
   background-repeat: no-repeat;
   background-position: left, center;
@@ -646,7 +646,7 @@ html {
 .item-list .has-arrow .has-arrow::after {
   width: 2rem;
   height: 2rem;
-  background-image: url("../_common/img/icon/arr_right.svg");
+  background-image: url("/components/_common/img/icon/arr_right.svg");
   background-size: 2rem auto;
   background-repeat: no-repeat;
   background-position: 50%, 50%;
@@ -1020,7 +1020,7 @@ html {
 .arw-toggle {
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url("../_common/img/icon/arr_right.svg");
+  background-image: url("/components/_common/img/icon/arr_right.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center, center;
@@ -1443,14 +1443,14 @@ html {
 .paging .inner .__board-prev {
   width: 8px;
   transform: rotate(180deg);
-  background-image: url("../_common/img/icon/arr_right.svg");
+  background-image: url("/components/_common/img/icon/arr_right.svg");
   background-size: 2rem auto;
   background-repeat: no-repeat;
   background-position: center, center;
 }
 .paging .inner .__board-next {
   width: 8px;
-  background-image: url("../_common/img/icon/arr_right.svg");
+  background-image: url("/components/_common/img/icon/arr_right.svg");
   background-size: 2rem auto;
   background-repeat: no-repeat;
   background-position: center, center;
@@ -2251,7 +2251,7 @@ button.fold-toggle.rotate .arw-toggle {
 .icon.__close {
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url("../_common/img/button/btn_close.svg");
+  background-image: url("/components/_common/img/button/btn_close.svg");
   background-size: 1.5rem auto;
   background-repeat: no-repeat;
   background-position: 50%, 50%;
@@ -3422,7 +3422,7 @@ img.img-cover {
   width: 26px;
   top: 50%;
   transform: translateY(-50%);
-  background: url("../_common/img/icon/arr_right.svg") no-repeat center;
+  background: url("/components/_common/img/icon/arr_right.svg") no-repeat center;
   background-size: 2.4rem;
 }
 
@@ -3631,7 +3631,7 @@ textarea.form-input.form-input:disabled:hover {
   transition: all 0.3s;
   padding-right: 45px;
   font-size: 1.4rem;
-  background-image: url("../_common/img/icon/caret_down.svg");
+  background-image: url("/components/_common/img/icon/caret_down.svg");
   background-size: 1.6rem auto;
   background-repeat: no-repeat;
   background-position: calc(100% - 1.5rem), center;
@@ -3704,21 +3704,21 @@ textarea.form-input.form-input:disabled:hover {
   background-color: inherit;
 }
 .form-radio.v-chk > input:checked + label:before {
-  background-image: url("../_common/img/icon/ico_radio_on.svg");
+  background-image: url("/components/_common/img/icon/ico_radio_on.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center, center;
   border: none;
 }
 .form-radio.v-chk > input[disabled] + label:before {
-  background-image: url("../_common/img/icon/ico_radio_disable.svg");
+  background-image: url("/components/_common/img/icon/ico_radio_disable.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center, center;
   border: none;
 }
 .form-radio.v-chk label:before {
-  background-image: url("../_common/img/icon/ico_radio_off.svg");
+  background-image: url("/components/_common/img/icon/ico_radio_off.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center, center;
@@ -4254,7 +4254,7 @@ span.form-text {
   position: absolute;
   width: 2.4rem;
   height: 2.4rem;
-  background-image: url("../_common/img/icon/ico_del.svg");
+  background-image: url("/components/_common/img/icon/ico_del.svg");
   background-size: 2rem auto;
   background-repeat: no-repeat;
   background-position: 50%, 50%;

@@ -19,10 +19,29 @@
   height: 5rem;
   padding: 0 2rem;
   background-color: $color-white;
-  & h1 {
+  h1 {
     width:11.6rem;
+    &.user {
+      &:after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        left: .5rem;
+        top: .1rem;
+        width: .6rem;
+        height: 1.2rem;
+        @include image-style("../img/icon/arr_r_blk.svg", .6rem auto, no-repeat, center, center );    
+      }
+      width: inherit;
+      font-weight: nth($font-weight,7);
+      font-size: map-get($font-size,h3);
+      span {
+        padding-left: .5rem;
+        font-weight: nth($font-weight,3);
+      }
+    }
   }
-  & h1 img {
+  h1 img {
     min-width: 11.6rem;
     width: 100%;
     height: auto;
@@ -287,6 +306,11 @@ aside.sidebar {
     }
   }
 }
+
+body.is-aside-opened {
+  overflow: hidden;
+} 
+
 .is-aside-opened .sidebar {
   z-index: 2;
   display: block;
@@ -307,8 +331,7 @@ aside.sidebar {
   display: none;
 }
 
-#container {
-  z-index: 1;
+#container {  
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -428,8 +451,6 @@ aside.sidebar {
   }
 }
 
-
-
 @include res--mobile{
   @media screen and (max-width: #{$mobile}) {
     body {
@@ -450,3 +471,14 @@ aside.sidebar {
     }
   }
 };
+
+// 헤더픽스
+.navbar.sticky {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+body.sticky #container .content {
+  padding-top: 3.9rem;
+}
